@@ -1,2418 +1,1406 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth" data-theme="titanium-daylight">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zeeshan Qaisar — Full Stack Developer & Automation Engineer</title>
-    <meta name="description"
-        content="Full Stack Developer specializing in Laravel, React, Vue.js and AI workflow automation. 5+ years building scalable web applications and smart automations." />
-    <meta name="keywords"
-        content="Zeeshan Qaisar, Full Stack Developer, Laravel, React, Vue.js, n8n Automation, API Integration, PHP, Pakistan" />
+    <title>Zeeshan Qaisar — Senior Full Stack Laravel &amp; React Developer</title>
+    <meta name="description" content="Senior Full Stack Laravel &amp; React Developer with 5+ years of experience architecting production web applications, RESTful APIs, LMS platforms, and SaaS systems." />
+    <meta name="keywords" content="Zeeshan Qaisar, Senior Full Stack Developer, Laravel Developer, React Developer, Next.js, FilamentPHP, Livewire, Remote Software Engineer, Pakistan" />
     <meta name="author" content="Zeeshan Qaisar" />
-    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#F8FAFC" id="metaThemeColor" />
     <link rel="canonical" href="https://zeeshanq799.github.io/zeeshan-qaisar/" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://zeeshanq799.github.io/zeeshan-qaisar/" />
-    <meta property="og:title" content="Zeeshan Qaisar — Full Stack Developer & Automation Engineer" />
-    <meta property="og:description"
-        content="Full Stack Developer specializing in Laravel, React, Vue.js and AI workflow automation." />
+    <meta property="og:title" content="Zeeshan Qaisar — Senior Full Stack Laravel &amp; React Developer" />
+    <meta property="og:description" content="Senior Full Stack Laravel &amp; React Developer with 5+ years of experience architecting production web applications, RESTful APIs, LMS platforms, and SaaS systems." />
     <meta property="og:image" content="https://zeeshanq799.github.io/zeeshan-qaisar/og-image.jpg" />
-    <meta name="theme-color" content="#0d0d14" />
+
+    <!-- Google Fonts: Bricolage Grotesque, Plus Jakarta Sans & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['"Bricolage Grotesque"', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    }
+                }
+            }
+        };
+    </script>
 
     <style>
-        /* ═══════════════════════════════════════════════
-       DESIGN TOKENS
-    ═══════════════════════════════════════════════ */
-        :root {
-            --bg: #0d0d14;
-            --surface: #13131f;
-            --surface-2: #1a1a2e;
-            --border: rgba(255, 255, 255, 0.07);
-            --border-hover: rgba(255, 255, 255, 0.15);
-            --accent: #6c63ff;
-            --accent-dim: rgba(108, 99, 255, 0.12);
-            --accent-glow: rgba(108, 99, 255, 0.35);
-            --teal: #00d4aa;
-            --teal-dim: rgba(0, 212, 170, 0.1);
-            --amber: #f5a623;
-            --text: #e8e8f0;
-            --text-muted: #7a7a9a;
-            --text-faint: #3e3e58;
-            --white: #ffffff;
-            --font-display: 'Bricolage Grotesque', sans-serif;
-            --font-body: 'Plus Jakarta Sans', sans-serif;
-            --radius-sm: 8px;
-            --radius-md: 14px;
-            --radius-lg: 20px;
-            --radius-xl: 28px;
-            --radius-full: 999px;
-            --shadow-card: 0 1px 1px rgba(0, 0, 0, 0.3), 0 4px 24px rgba(0, 0, 0, 0.25);
-            --shadow-glow: 0 0 40px rgba(108, 99, 255, 0.2);
-            --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        /* ═══════════════════════════════════════════════════════════════════
+           1. TITANIUM DAYLIGHT THEME (SWISS LIGHT ENTERPRISE)
+        ═══════════════════════════════════════════════════════════════════ */
+        :root,
+        [data-theme="titanium-daylight"] {
+            --theme-name: "Titanium Daylight (Swiss Light Enterprise)";
+            --bg: #F8FAFC;
+            --bg-alt: #F1F5F9;
+            --surface: rgba(255, 255, 255, 0.95);
+            --surface-solid: #FFFFFF;
+            --surface-elevated: #FFFFFF;
+            --terminal-bg: #0F172A;
+            --border: rgba(15, 23, 42, 0.08);
+            --border-highlight: rgba(37, 99, 235, 0.45);
+            --primary: #2563EB;
+            --primary-rgb: 37, 99, 235;
+            --secondary: #059669;
+            --secondary-rgb: 5, 150, 105;
+            --tertiary: #4F46E5;
+            --text: #0F172A;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+            --btn-bevel: #1E40AF;
+            --btn-text: #FFFFFF;
+            --card-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
+            --glass-glare: rgba(255, 255, 255, 0.8);
         }
 
-        /* ═══════════════════════════════════════════════
-       BASE RESET
-    ═══════════════════════════════════════════════ */
-        *,
-        *::before,
-        *::after {
+        /* ═══════════════════════════════════════════════════════════════════
+           2. BASE & UTILITY STYLES
+        ═══════════════════════════════════════════════════════════════════ */
+        * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background: var(--bg);
-            color: var(--text);
-            overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-        }
-
-        button {
-            font-family: inherit;
-            cursor: pointer;
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
         }
 
         ::selection {
-            background: var(--accent);
-            color: var(--white);
+            background: var(--primary);
+            color: #ffffff;
         }
 
-        :focus-visible {
-            outline: 2px solid var(--accent);
-            outline-offset: 4px;
-            border-radius: 4px;
-        }
+        .theme-text-primary { color: var(--primary); }
+        .theme-text-secondary { color: var(--secondary); }
+        .theme-text-main { color: var(--text); }
+        .theme-text-body { color: var(--text-secondary); }
+        .theme-text-muted { color: var(--text-muted); }
 
-        @media (prefers-reduced-motion: reduce) {
+        .theme-bg-alt { background-color: var(--bg-alt); }
+        .theme-surface { background-color: var(--surface); }
+        .theme-surface-elevated { background-color: var(--surface-elevated); }
+        .theme-border { border-color: var(--border); }
 
-            *,
-            ::before,
-            ::after {
-                animation-duration: 0.01ms !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-
-        /* ═══════════════════════════════════════════════
-       SCROLL PROGRESS
-    ═══════════════════════════════════════════════ */
-        .scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 2px;
-            width: 0%;
-            background: linear-gradient(90deg, var(--accent), var(--teal));
-            z-index: 9999;
-            transition: width 0.1s linear;
-        }
-
-        /* ═══════════════════════════════════════════════
-       NOISE TEXTURE OVERLAY
-    ═══════════════════════════════════════════════ */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-            opacity: 0.4;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        /* ═══════════════════════════════════════════════
-       AMBIENT BG BLOBS
-    ═══════════════════════════════════════════════ */
-        .bg-blobs {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .bg-blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(120px);
-            opacity: 0.15;
-        }
-
-        .bg-blob-1 {
-            width: 600px;
-            height: 600px;
-            background: var(--accent);
-            top: -200px;
-            left: -100px;
-            animation: blobFloat 20s ease-in-out infinite;
-        }
-
-        .bg-blob-2 {
-            width: 500px;
-            height: 500px;
-            background: var(--teal);
-            bottom: 10%;
-            right: -150px;
-            animation: blobFloat 25s ease-in-out infinite reverse;
-        }
-
-        .bg-blob-3 {
-            width: 400px;
-            height: 400px;
-            background: var(--accent);
-            top: 50%;
-            left: 40%;
-            animation: blobFloat 30s ease-in-out infinite 5s;
-        }
-
-        @keyframes blobFloat {
-
-            0%,
-            100% {
-                transform: translate(0, 0) scale(1);
-            }
-
-            33% {
-                transform: translate(30px, -40px) scale(1.05);
-            }
-
-            66% {
-                transform: translate(-20px, 20px) scale(0.95);
-            }
-        }
-
-        /* ═══════════════════════════════════════════════
-       NAVBAR
-    ═══════════════════════════════════════════════ */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 0 48px;
-            height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: rgba(13, 13, 20, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
-            animation: navDrop 0.6s ease both;
-        }
-
-        @keyframes navDrop {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .logo {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            background: linear-gradient(135deg, var(--white) 40%, var(--accent));
+        .theme-gradient-text {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            transition: opacity var(--transition);
         }
 
-        .logo:hover {
-            opacity: 0.8;
+        .theme-badge-primary {
+            background-color: rgba(var(--primary-rgb), 0.09);
+            border: 1px solid rgba(var(--primary-rgb), 0.25);
+            color: var(--primary);
         }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 36px;
+        .theme-badge-secondary {
+            background-color: rgba(var(--secondary-rgb), 0.09);
+            border: 1px solid rgba(var(--secondary-rgb), 0.25);
+            color: var(--secondary);
         }
 
-        .nav-links a {
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--text-muted);
-            letter-spacing: 0.01em;
-            transition: color var(--transition);
+        /* Subtle Noise Overlay */
+        .bg-noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+        }
+
+        /* ═══════════════════════════════════════════════════════════════════
+           3. CLEAN 3D CARDS (NO TILT JITTER, GUARANTEED 1-CLICK NAVIGATION)
+        ═══════════════════════════════════════════════════════════════════ */
+        .scene-3d {
             position: relative;
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--accent);
-            transition: width var(--transition);
+        .tilt-card {
+            position: relative;
+            background: var(--surface);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 1.5rem;
+            box-shadow: var(--card-shadow), inset 0 1px 0 0 var(--glass-glare);
+            transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.22s ease,
+                        border-color 0.22s ease;
         }
 
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--white);
+        .tilt-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--border-highlight);
+            box-shadow: 0 22px 45px -12px rgba(37, 99, 235, 0.16),
+                        0 4px 14px -2px rgba(15, 23, 42, 0.05),
+                        inset 0 1px 0 0 var(--glass-glare);
         }
 
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 100%;
-        }
-
-        .nav-cta {
-            padding: 9px 22px;
-            background: var(--accent);
-            color: var(--white) !important;
-            border-radius: var(--radius-full);
-            font-weight: 600;
-            font-size: 0.85rem !important;
-            transition: background var(--transition), transform var(--transition), box-shadow var(--transition) !important;
-        }
-
-        .nav-cta::after {
+        .tilt-glare {
             display: none !important;
         }
 
-        .nav-cta:hover {
-            background: #5851e6;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 20px var(--accent-glow);
-            color: var(--white) !important;
-        }
-
-        /* Hamburger */
-        .nav-hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            padding: 8px;
-            z-index: 1001;
-        }
-
-        .nav-hamburger span {
-            display: block;
-            width: 22px;
-            height: 2px;
-            background: var(--text);
-            border-radius: 2px;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        .nav-hamburger.is-open span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .nav-hamburger.is-open span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .nav-hamburger.is-open span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-
-        /* ═══════════════════════════════════════════════
-       LAYOUT HELPERS
-    ═══════════════════════════════════════════════ */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 48px;
+        .layer-z-10, .layer-z-20, .layer-z-30, .layer-z-40, .layer-z-50 {
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
-        .section {
-            padding: 100px 0;
+        /* Guaranteed 1-Click Interactive Elements */
+        .tilt-card a,
+        .tilt-card button {
             position: relative;
-        }
-
-        .section-label {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 16px;
-        }
-
-        .section-label::before {
-            content: '';
-            display: block;
-            width: 24px;
-            height: 1px;
-            background: var(--accent);
-        }
-
-        .section-title {
-            font-family: var(--font-display);
-            font-size: clamp(1.9rem, 3.8vw, 2.8rem);
-            font-weight: 700;
-            letter-spacing: -0.025em;
-            color: var(--white);
-            line-height: 1.15;
-            margin-bottom: 16px;
-        }
-
-        .section-subtitle {
-            font-size: 1rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-            max-width: 560px;
-        }
-
-        .section-header {
-            margin-bottom: 64px;
-        }
-
-        /* ═══════════════════════════════════════════════
-       HERO
-    ═══════════════════════════════════════════════ */
-        #home {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 120px;
-            padding-bottom: 80px;
-        }
-
-        .hero-inner {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .hero-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 16px;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-full);
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-bottom: 28px;
-            background: rgba(255, 255, 255, 0.03);
-            animation: fadeUp 0.6s ease 0.1s both;
-        }
-
-        .hero-tag-dot {
-            width: 6px;
-            height: 6px;
-            background: var(--teal);
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                box-shadow: 0 0 0 0 rgba(0, 212, 170, 0.4);
-            }
-
-            50% {
-                box-shadow: 0 0 0 6px rgba(0, 212, 170, 0);
-            }
-        }
-
-        .hero-heading {
-            font-family: var(--font-display);
-            font-size: clamp(2.6rem, 5.5vw, 4.6rem);
-            font-weight: 700;
-            letter-spacing: -0.025em;
-            line-height: 1.05;
-            color: var(--white);
-            margin-bottom: 24px;
-            animation: fadeUp 0.6s ease 0.2s both;
-        }
-
-        .hero-heading .accent-word {
-            background: linear-gradient(135deg, var(--accent) 0%, var(--teal) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-heading .line-dim {
-            color: var(--text-muted);
-            font-weight: 700;
-        }
-
-        .hero-description {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            line-height: 1.8;
-            max-width: 520px;
-            margin-bottom: 40px;
-            animation: fadeUp 0.6s ease 0.3s both;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            animation: fadeUp 0.6s ease 0.4s both;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 13px 28px;
-            border-radius: var(--radius-full);
-            font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 0.01em;
-            transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
-        }
-
-        .btn:active {
-            transform: scale(0.97);
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: var(--white);
-            box-shadow: 0 4px 20px var(--accent-glow);
-        }
-
-        .btn-primary:hover {
-            background: #5851e6;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px var(--accent-glow);
-        }
-
-        .btn-ghost {
-            background: rgba(255, 255, 255, 0.06);
-            color: var(--text);
-            border: 1px solid var(--border);
-        }
-
-        .btn-ghost:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--border-hover);
-            transform: translateY(-2px);
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 40px;
-            margin-top: 56px;
-            padding-top: 40px;
-            border-top: 1px solid var(--border);
-            animation: fadeUp 0.6s ease 0.5s both;
-        }
-
-        .hero-stat-num {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--white);
-            letter-spacing: -0.025em;
-        }
-
-        .hero-stat-label {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-top: 2px;
-        }
-
-        /* Avatar card */
-        .hero-avatar-wrap {
-            animation: fadeUp 0.6s ease 0.3s both;
-        }
-
-        .hero-avatar-card {
-            width: 280px;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-xl);
-            background: var(--surface);
-            overflow: hidden;
-            position: relative;
-            box-shadow: var(--shadow-card);
-        }
-
-        .hero-avatar-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent), var(--teal));
-        }
-
-        .hero-avatar-inner {
-            padding: 36px 28px;
-            text-align: center;
-        }
-
-        .hero-avatar-emoji {
-            width: 88px;
-            height: 88px;
-            background: linear-gradient(135deg, var(--accent-dim), var(--teal-dim));
-            border: 1px solid var(--border);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.8rem;
-            margin: 0 auto 20px;
-        }
-
-        .hero-card-name {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 4px;
-        }
-
-        .hero-card-role {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
-
-        .hero-card-badges {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .hero-card-badge {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 12px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-align: left;
-        }
-
-        .hero-card-badge-icon {
-            font-size: 0.9rem;
-        }
-
-        .hero-avail-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            padding: 10px;
-            background: rgba(0, 212, 170, 0.08);
-            border-top: 1px solid rgba(0, 212, 170, 0.15);
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--teal);
-        }
-
-        .avail-dot {
-            width: 6px;
-            height: 6px;
-            background: var(--teal);
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        /* ═══════════════════════════════════════════════
-       DIVIDER
-    ═══════════════════════════════════════════════ */
-        .section-divider {
-            height: 1px;
-            background: var(--border);
-            margin: 0 48px;
-        }
-
-        /* ═══════════════════════════════════════════════
-       CARDS (shared)
-    ═══════════════════════════════════════════════ */
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            border-color: var(--border-hover);
-            box-shadow: var(--shadow-glow);
-            transform: translateY(-6px);
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--teal));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-
-        .card:hover::before {
-            transform: scaleX(1);
-        }
-
-        /* ═══════════════════════════════════════════════
-       STATS GRID
-    ═══════════════════════════════════════════════ */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .stat-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 32px 24px;
-            text-align: center;
-            transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
-        }
-
-        .stat-card:hover {
-            border-color: var(--border-hover);
-            box-shadow: var(--shadow-glow);
-            transform: translateY(-4px);
-        }
-
-        .stat-icon {
-            font-size: 1.8rem;
-            margin-bottom: 12px;
-        }
-
-        .stat-number {
-            font-family: var(--font-display);
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--white);
-            letter-spacing: -0.03em;
-            margin-bottom: 4px;
-        }
-
-        .stat-label {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        /* ═══════════════════════════════════════════════
-       SKILLS
-    ═══════════════════════════════════════════════ */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        .skill-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
-        }
-
-        .skill-card:hover {
-            border-color: var(--border-hover);
-            box-shadow: var(--shadow-glow);
-            transform: translateY(-4px);
-        }
-
-        .skill-card-icon {
-            font-size: 1.8rem;
-            margin-bottom: 16px;
-        }
-
-        .skill-card-title {
-            font-family: var(--font-display);
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 20px;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-tag {
-            padding: 5px 14px;
-            border: 1px solid rgba(108, 99, 255, 0.3);
-            border-radius: var(--radius-full);
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: var(--accent);
-            background: var(--accent-dim);
-            transition: background var(--transition), border-color var(--transition), transform var(--transition), color var(--transition);
-        }
-
-        .skill-tag:hover {
-            background: var(--accent);
-            color: var(--white);
-            border-color: var(--accent);
-            transform: translateY(-2px);
-        }
-
-        /* ═══════════════════════════════════════════════
-       SERVICES GRID
-    ═══════════════════════════════════════════════ */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .services-grid-2 {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .service-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card:hover {
-            border-color: var(--border-hover);
-            box-shadow: var(--shadow-glow);
-            transform: translateY(-6px);
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--teal));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-num {
-            font-family: var(--font-display);
-            font-size: 2.6rem;
-            font-weight: 800;
-            color: var(--text-faint);
-            letter-spacing: -0.03em;
-            margin-bottom: 16px;
-            line-height: 1;
-        }
-
-        .service-title {
-            font-family: var(--font-display);
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 12px;
-        }
-
-        .service-desc {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        .service-tech {
-            margin-top: 16px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--accent);
-        }
-
-        /* ═══════════════════════════════════════════════
-       IMPACT METRICS
-    ═══════════════════════════════════════════════ */
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
-
-        .impact-card {
-            background: var(--surface-2);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 24px;
-            text-align: center;
-        }
-
-        .impact-num {
-            font-family: var(--font-display);
-            font-size: 1.7rem;
-            font-weight: 700;
-            color: var(--teal);
-            letter-spacing: -0.025em;
-        }
-
-        .impact-label {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            margin-top: 4px;
-        }
-
-        /* ═══════════════════════════════════════════════
-       CASE STUDY CARDS
-    ═══════════════════════════════════════════════ */
-        .project-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-xl);
-            overflow: hidden;
-            transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
-        }
-
-        .project-card:hover {
-            border-color: var(--border-hover);
-            box-shadow: var(--shadow-glow);
-            transform: translateY(-6px);
-        }
-
-        .project-card-header {
-            padding: 36px 36px 28px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .project-card-meta {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 16px;
-        }
-
-        .project-badge {
-            padding: 4px 12px;
-            background: var(--accent-dim);
-            border: 1px solid rgba(108, 99, 255, 0.2);
-            border-radius: var(--radius-full);
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
-        .project-link-badge {
-            margin-left: auto;
-            font-size: 0.75rem;
-            color: var(--teal);
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            transition: gap var(--transition);
-        }
-
-        .project-link-badge:hover {
-            gap: 8px;
-        }
-
-        .project-title {
-            font-family: var(--font-display);
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--white);
-            letter-spacing: -0.02em;
-            margin-bottom: 10px;
-        }
-
-        .project-desc {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        .project-card-body {
-            padding: 28px 36px 36px;
-        }
-
-        .case-study-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-bottom: 28px;
-        }
-
-        .case-col-title {
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--text-faint);
-            margin-bottom: 12px;
-        }
-
-        .case-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .case-list-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
-
-        .case-list-item::before {
-            content: '→';
-            color: var(--accent);
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
-
-        .case-sol-item::before {
-            color: var(--teal);
-            content: '✓';
-        }
-
-        /* ═══════════════════════════════════════════════
-       TIMELINE
-    ═══════════════════════════════════════════════ */
-        .timeline {
-            position: relative;
-            padding-left: 32px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 7px;
-            top: 0;
-            bottom: 0;
-            width: 1px;
-            background: var(--border);
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-bottom: 48px;
-        }
-
-        .timeline-item:last-child {
-            padding-bottom: 0;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            left: -28px;
-            top: 4px;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: var(--surface-2);
-            border: 2px solid var(--border);
-            transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
-        }
-
-        .timeline-item:hover .timeline-dot {
-            border-color: var(--accent);
-            background: var(--accent);
-            box-shadow: 0 0 0 4px var(--accent-dim);
-        }
-
-        .timeline-content {
-            padding: 28px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
-        }
-
-        .timeline-item:hover .timeline-content {
-            border-color: var(--border-hover);
-            transform: translateX(6px);
-            box-shadow: var(--shadow-glow);
-        }
-
-        .timeline-date {
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 8px;
-        }
-
-        .timeline-title {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 4px;
-        }
-
-        .timeline-company {
-            font-size: 0.88rem;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 2px;
-        }
-
-        .timeline-location {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-        }
-
-        .timeline-description {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        /* ═══════════════════════════════════════════════
-       CTA SECTION
-    ═══════════════════════════════════════════════ */
-        .cta-box {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-xl);
-            padding: 80px 64px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-box::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(108, 99, 255, 0.15), transparent);
-        }
-
-        .cta-box::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent), var(--teal), transparent);
-        }
-
-        .cta-inner {
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--teal);
-            margin-bottom: 20px;
-        }
-
-        .cta-title {
-            font-family: var(--font-display);
-            font-size: clamp(1.9rem, 3.8vw, 2.8rem);
-            font-weight: 700;
-            color: var(--white);
-            letter-spacing: -0.025em;
-            margin-bottom: 16px;
-        }
-
-        .cta-desc {
-            font-size: 1rem;
-            color: var(--text-muted);
-            max-width: 520px;
-            margin: 0 auto 40px;
-            line-height: 1.7;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-        }
-
-        .social-link {
-            width: 44px;
-            height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            font-size: 1.1rem;
-            background: rgba(255, 255, 255, 0.04);
-            transition: border-color var(--transition), background var(--transition), transform var(--transition);
-        }
-
-        .social-link:hover {
-            border-color: var(--border-hover);
-            background: rgba(255, 255, 255, 0.08);
-            transform: translateY(-3px);
-        }
-
-        /* ═══════════════════════════════════════════════
-       FOOTER
-    ═══════════════════════════════════════════════ */
-        footer {
-            padding: 40px 48px;
-            border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .footer-left {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-        }
-
-        .footer-left strong {
-            color: var(--white);
-            font-weight: 600;
-        }
-
-        .footer-right {
-            font-size: 0.78rem;
-            color: var(--text-faint);
-        }
-
-        /* ═══════════════════════════════════════════════
-       ENTRANCE ANIMATIONS
-    ═══════════════════════════════════════════════ */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(24px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .pf-animate {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        .pf-animate.pf-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ═══════════════════════════════════════════════
-       RESPONSIVE
-    ═══════════════════════════════════════════════ */
-        @media (max-width: 1024px) {
-            .hero-inner {
-                grid-template-columns: 1fr;
-                gap: 48px;
-            }
-
-            .hero-avatar-wrap {
-                display: flex;
-                justify-content: center;
-                order: -1;
-            }
-
-            .hero-avatar-card {
-                width: 260px;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            /* already 2-col */
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .services-grid-2 {
-                grid-template-columns: 1fr;
-            }
-
-            .impact-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 24px;
-            }
-
-            .navbar {
-                padding: 0 24px;
-                height: 64px;
-            }
-
-            /* ── Slide-in drawer ── */
-            .nav-links {
-                display: flex !important;
-                position: fixed;
-                top: 0;
-                right: 0;
-                width: min(300px, 82vw);
-                height: 100dvh;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: stretch;
-                gap: 0;
-                padding: 76px 0 40px;
-                background: #0d0d14;
-                border-left: 1px solid rgba(255, 255, 255, 0.09);
-                box-shadow: -24px 0 64px rgba(0, 0, 0, 0.7);
-                transform: translateX(100%);
-                transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
-                z-index: 998;
-                overflow-y: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-
-            .nav-links.is-open {
-                transform: translateX(0);
-            }
-
-            .nav-links li {
-                border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            }
-
-            .nav-links a {
-                display: block !important;
-                padding: 17px 28px !important;
-                font-size: 0.97rem !important;
-                font-weight: 500 !important;
-                color: var(--text) !important;
-                letter-spacing: 0.01em;
-                transition: background 0.2s, color 0.2s, padding-left 0.2s;
-            }
-
-            .nav-links a:hover,
-            .nav-links a.active {
-                background: rgba(108, 99, 255, 0.1);
-                color: var(--white) !important;
-                padding-left: 36px !important;
-            }
-
-            .nav-links a::after {
-                display: none !important;
-            }
-
-            /* CTA shown inside drawer */
-            .nav-cta {
-                display: block !important;
-                margin: 20px 24px 0 !important;
-                padding: 13px 24px !important;
-                text-align: center !important;
-                border-radius: var(--radius-full) !important;
-                background: var(--accent) !important;
-                color: var(--white) !important;
-                font-size: 0.92rem !important;
-                font-weight: 600 !important;
-                box-shadow: 0 4px 20px rgba(108, 99, 255, 0.35);
-            }
-
-            .nav-cta:hover {
-                background: #5851e6 !important;
-                padding-left: 24px !important;
-            }
-
-            .nav-hamburger {
-                display: flex;
-                z-index: 1001;
-            }
-
-            /* Dim overlay */
-            .nav-overlay {
-                position: fixed;
-                inset: 0;
-                background: rgba(0, 0, 0, 0.55);
-                z-index: 997;
-                opacity: 0;
-                pointer-events: none;
-                transition: opacity 0.3s ease;
-            }
-
-            .nav-overlay.is-open {
-                opacity: 1;
-                pointer-events: auto;
-            }
-
-            .section {
-                padding: 64px 0;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .impact-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .case-study-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-box {
-                padding: 48px 24px;
-            }
-
-            .hero-stats {
-                flex-wrap: wrap;
-                gap: 24px;
-            }
-
-            footer {
-                flex-direction: column;
-                gap: 8px;
-                text-align: center;
-                padding: 28px 24px;
-            }
-
-            .section-divider {
-                margin: 0 24px;
-            }
-
-            .project-card-header {
-                padding: 24px 20px 20px;
-            }
-
-            .project-card-body {
-                padding: 20px 20px 28px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .stats-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .hero-heading {
-                font-size: 2.4rem;
-            }
-        }
-
-        /* ═══════════════════════════════════════════════
-       SECTION BG ALTERNATION
-    ═══════════════════════════════════════════════ */
-        .section-alt {
-            background: var(--surface);
-        }
-
-        /* ═══════════════════════════════════════════════
-       CHALLENGES / SOLUTIONS MINI-CARDS
-    ═══════════════════════════════════════════════ */
-        .mini-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 12px;
-            margin-top: 16px;
-        }
-
-        .mini-card {
-            background: var(--surface-2);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 16px;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        .mini-card strong {
-            display: block;
-            color: var(--white);
-            font-weight: 600;
-            margin-bottom: 4px;
-            font-size: 0.82rem;
-        }
-
-        .mini-card-accent {
-            border-left: 2px solid var(--teal);
-            padding-left: 14px;
-        }
-
-        .mini-card-warn {
-            border-left: 2px solid var(--amber);
-            padding-left: 14px;
-        }
-
-        /* Two-column layout for big sections */
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            align-items: start;
-        }
-
-        @media (max-width: 768px) {
-            .two-col {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-        }
-
-        .col-label {
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--text-faint);
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .col-label::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: var(--border);
-        }
-
-        /* ═══════════════════════════════════════════════
-       FIVERR LINK STYLES
-    ═══════════════════════════════════════════════ */
-
-        /* Hero card — Fiverr badge link */
-        .hero-card-badge-fiverr {
-            text-decoration: none;
-            border: 1px solid rgba(0, 212, 170, 0.3) !important;
-            background: rgba(0, 212, 170, 0.08) !important;
-            color: var(--teal) !important;
-            font-weight: 600;
-            margin-top: 4px;
-            transition: background var(--transition), border-color var(--transition), transform var(--transition);
+            z-index: 30;
             cursor: pointer;
+            touch-action: manipulation;
         }
 
-        .hero-card-badge-fiverr:hover {
-            background: rgba(0, 212, 170, 0.18) !important;
-            border-color: rgba(0, 212, 170, 0.55) !important;
+        /* ═══════════════════════════════════════════════════════════════════
+           4. TACTILE 3D MECHANICAL BUTTONS & PILLS
+        ═══════════════════════════════════════════════════════════════════ */
+        .btn-3d-primary {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #ffffff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 6px 0 0 var(--btn-bevel), 0 14px 28px -4px rgba(var(--primary-rgb), 0.45);
+            transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.18s ease, filter 0.2s ease;
+        }
+
+        .btn-3d-primary:hover {
             transform: translateY(-2px);
+            filter: brightness(1.06);
+            box-shadow: 0 8px 0 0 var(--btn-bevel), 0 20px 34px -4px rgba(var(--primary-rgb), 0.58);
         }
 
-        .fiverr-arrow {
-            display: inline-block;
-            transition: transform var(--transition);
+        .btn-3d-primary:active {
+            transform: translateY(5px) !important;
+            box-shadow: 0 1px 0 0 var(--btn-bevel), 0 5px 10px -2px rgba(var(--primary-rgb), 0.35) !important;
         }
 
-        .hero-card-badge-fiverr:hover .fiverr-arrow {
-            transform: translateX(4px);
+        .btn-3d-secondary {
+            position: relative;
+            background: var(--surface-solid);
+            color: var(--text);
+            border: 1px solid var(--border);
+            box-shadow: 0 5px 0 0 rgba(15, 23, 42, 0.12), 0 10px 20px -5px rgba(15, 23, 42, 0.08);
+            transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.18s ease, border-color 0.2s ease, color 0.2s ease;
         }
 
-        /* CTA — Fiverr social icon button */
-        .social-link-fiverr {
-            color: var(--teal);
-            border-color: rgba(0, 212, 170, 0.25) !important;
-            background: rgba(0, 212, 170, 0.07) !important;
+        .btn-3d-secondary:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+            color: var(--primary);
+            box-shadow: 0 7px 0 0 rgba(var(--primary-rgb), 0.3), 0 14px 26px -5px rgba(var(--primary-rgb), 0.18);
         }
 
-        .social-link-fiverr:hover {
-            border-color: rgba(0, 212, 170, 0.5) !important;
-            background: rgba(0, 212, 170, 0.15) !important;
-            color: var(--teal);
+        .btn-3d-secondary:active {
+            transform: translateY(4px) !important;
+            box-shadow: 0 1px 0 0 rgba(15, 23, 42, 0.12) !important;
         }
 
-        /* Timeline — company row with profile link */
-        .timeline-company-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 2px;
-            flex-wrap: wrap;
+        /* 3D Skill Pill Elevation */
+        .skill-pill-3d {
+            background: var(--surface-solid);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 3px 0 0 rgba(15, 23, 42, 0.1);
         }
 
-        .timeline-profile-link {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--teal);
-            text-decoration: none;
-            padding: 3px 10px;
-            border: 1px solid rgba(0, 212, 170, 0.3);
-            border-radius: var(--radius-full);
-            background: rgba(0, 212, 170, 0.07);
-            transition: background var(--transition), border-color var(--transition), gap var(--transition);
-            white-space: nowrap;
-            letter-spacing: 0.01em;
+        .skill-pill-3d:hover {
+            transform: translateY(-4px) scale(1.04);
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(var(--primary-rgb), 0.08);
+            box-shadow: 0 7px 0 0 rgba(var(--primary-rgb), 0.3), 0 12px 22px -4px rgba(var(--primary-rgb), 0.25);
         }
 
-        .timeline-profile-link:hover {
-            background: rgba(0, 212, 170, 0.15);
-            border-color: rgba(0, 212, 170, 0.55);
+        /* Filter Button Active */
+        .filter-btn {
+            background-color: var(--surface-solid);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
         }
 
-
-        /* ═══════════════════════════════════════════════
-       AI SKILL CARD — teal accent variant
-    ═══════════════════════════════════════════════ */
-        .skill-card-ai {
-            border-color: rgba(0, 212, 170, 0.15);
-            background: linear-gradient(145deg, var(--surface), rgba(0, 212, 170, 0.04));
+        .filter-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
         }
 
-        .skill-card-ai::before {
-            background: linear-gradient(90deg, var(--teal), var(--accent));
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #ffffff;
+            border-color: transparent;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
         }
 
-        .skill-card-ai:hover {
-            border-color: rgba(0, 212, 170, 0.3);
-            box-shadow: 0 12px 40px rgba(0, 212, 170, 0.15);
+        /* Code Tab Active */
+        .code-tab.active {
+            background: rgba(37, 99, 235, 0.25);
+            color: #ffffff;
+            border-bottom: 2px solid #38BDF8;
         }
 
-        .skill-tag-ai {
-            color: var(--teal) !important;
-            border-color: rgba(0, 212, 170, 0.3) !important;
-            background: rgba(0, 212, 170, 0.08) !important;
+        /* Floating 3D Badges */
+        @keyframes floatOrbA {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-7px); }
         }
+        @keyframes floatOrbB {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(7px); }
+        }
+        .float-orb-a { animation: floatOrbA 5s ease-in-out infinite; }
+        .float-orb-b { animation: floatOrbB 6s ease-in-out infinite; }
 
-        .skill-tag-ai:hover {
-            background: var(--teal) !important;
-            color: #0d0d14 !important;
-            border-color: var(--teal) !important;
-        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
     </style>
 </head>
+<body class="relative min-h-screen font-sans">
 
-<body>
+    <!-- Top Scroll Progress Bar -->
+    <div id="scrollProgress" class="fixed top-0 left-0 h-[3px] w-0 z-[9999] transition-all duration-75" style="background: linear-gradient(90deg, var(--primary), var(--secondary));"></div>
 
-    <!-- ══ Scroll Progress ══════════════════════════ -->
-    <div class="scroll-progress" id="scrollBar"></div>
+    <!-- Soft 3D Constellation Particle Canvas (Titanium Daylight) -->
+    <canvas id="bgCanvas" class="fixed inset-0 w-full h-full pointer-events-none z-0 opacity-70"></canvas>
 
-    <!-- ══ Background ══════════════════════════════ -->
-    <div class="bg-blobs" aria-hidden="true">
-        <div class="bg-blob bg-blob-1"></div>
-        <div class="bg-blob bg-blob-2"></div>
-        <div class="bg-blob bg-blob-3"></div>
+    <!-- Dynamic Ambient Glow Orbs + Noise Texture -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-noise">
+        <div class="absolute -top-48 -left-48 w-[560px] h-[560px] rounded-full blur-[150px] opacity-15" style="background-color: var(--primary);"></div>
+        <div class="absolute top-1/3 -right-48 w-[520px] h-[520px] rounded-full blur-[150px] opacity-10" style="background-color: var(--secondary);"></div>
+        <div class="absolute -bottom-48 left-1/3 w-[520px] h-[520px] rounded-full blur-[160px] opacity-10" style="background-color: var(--tertiary);"></div>
     </div>
 
-    <!-- ══ NAVBAR ══════════════════════════════════ -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <a href="#home" class="logo">ZQ</a>
-        <ul class="nav-links" id="navLinks" role="list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#automation">Automation</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
-        </ul>
-        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation" aria-expanded="false"
-            aria-controls="navLinks">
-            <span></span><span></span><span></span>
-        </button>
-    </nav>
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FLOATING 3D GLASS NAVIGATION BAR
+    ═══════════════════════════════════════════════════════════════════ -->
+    <header class="fixed top-3.5 left-0 right-0 z-50 px-3 sm:px-6">
+        <nav class="max-w-7xl mx-auto h-16 px-4 sm:px-6 rounded-2xl theme-surface backdrop-blur-2xl border theme-border shadow-[0_8px_30px_rgba(15,23,42,0.06)] flex items-center justify-between gap-2">
 
-    <!-- ══ Nav overlay ════════════════════════════ -->
-    <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
-
-    <!-- ══ HERO ════════════════════════════════════ -->
-    <section id="home" class="section" aria-label="Introduction">
-        <div class="container">
-            <div class="hero-inner">
-                <!-- Left -->
-                <div>
-                    <div class="hero-tag">
-                        <span class="hero-tag-dot" aria-hidden="true"></span>
-                        Available for freelance &amp; remote roles
-                    </div>
-                    <h1 class="hero-heading">
-                        Full Stack<br>
-                        <span class="accent-word">Developer</span><br>
-                        <span class="line-dim">&amp; Automation</span><br>
-                        <span class="line-dim">Engineer</span>
-                    </h1>
-                    <p class="hero-description">
-                        Hi, I'm <strong style="color:var(--white)">Zeeshan Qaisar</strong> — I build modern web
-                        applications with Laravel, React &amp; Vue.js, and smart automation pipelines using n8n, AI
-                        APIs, and browser bots. 5+ years turning complex problems into clean solutions.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Start a Project</a>
-                        <a href="#projects" class="btn btn-ghost">View My Work</a>
-                        <a href="./Zeeshan_Qaisar_AI_Automation_FullStack_Resume.pdf" download class="btn btn-ghost">↓
-                            Download CV</a>
-                    </div>
-                    <div class="hero-stats">
-                        <div>
-                            <div class="hero-stat-num">5+</div>
-                            <div class="hero-stat-label">Years experience</div>
-                        </div>
-                        <div>
-                            <div class="hero-stat-num">200+</div>
-                            <div class="hero-stat-label">Projects shipped</div>
-                        </div>
-                        <div>
-                            <div class="hero-stat-num">100+</div>
-                            <div class="hero-stat-label">Happy clients</div>
-                        </div>
-                        <div>
-                            <div class="hero-stat-num">5★</div>
-                            <div class="hero-stat-label">Fiverr rating</div>
-                        </div>
+            <!-- Brand Identity -->
+            <a href="#home" class="flex items-center gap-2.5 group shrink-0 focus:outline-none">
+                <div class="w-10 h-10 rounded-xl p-[1.5px] shadow-sm transition-transform group-hover:scale-105" style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+                    <div class="w-full h-full rounded-[10px] flex items-center justify-center font-display font-extrabold text-base tracking-tighter" style="background-color: var(--surface-solid); color: var(--text);">
+                        ZQ
                     </div>
                 </div>
-                <!-- Right: Avatar card -->
-                <div class="hero-avatar-wrap">
-                    <div class="hero-avatar-card">
-                        <div class="hero-avatar-inner">
-                            <div class="hero-avatar-emoji" aria-hidden="true">👨‍💻</div>
-                            <div class="hero-card-name">Zeeshan Qaisar</div>
-                            <div class="hero-card-role">Full Stack Developer · Pakistan</div>
-                            <div class="hero-card-badges">
-                                <div class="hero-card-badge"><span class="hero-card-badge-icon">⚡</span>Laravel · React
-                                    · Vue.js</div>
-                                <div class="hero-card-badge"><span class="hero-card-badge-icon">🤖</span>n8n · AI
-                                    Workflows</div>
-                                <div class="hero-card-badge"><span class="hero-card-badge-icon">🔌</span>API &amp;
-                                    Payment Integrations</div>
-                                <a href="https://www.fiverr.com/s/99v7kkj" target="_blank" rel="noopener"
-                                    class="hero-card-badge hero-card-badge-fiverr" aria-label="View Fiverr Profile">
-                                    <span class="hero-card-badge-icon">🟢</span>
-                                    <span>View Fiverr Profile <span class="fiverr-arrow">→</span></span>
+                <div class="hidden sm:block">
+                    <span class="font-display font-bold text-sm lg:text-base block leading-none theme-text-main">Zeeshan Qaisar</span>
+                    <span class="font-mono text-[10px] tracking-widest uppercase theme-text-primary">Senior Full Stack</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <ul class="hidden xl:flex items-center gap-1 text-xs lg:text-sm font-medium theme-text-body">
+                <li><a href="#home" class="px-3 py-2 rounded-xl hover:text-blue-600 hover:bg-slate-100 transition">Home</a></li>
+                <li><a href="#projects" class="px-3 py-2 rounded-xl hover:text-blue-600 hover:bg-slate-100 transition">Projects</a></li>
+                <li><a href="#skills" class="px-3 py-2 rounded-xl hover:text-blue-600 hover:bg-slate-100 transition">Skills</a></li>
+                <li><a href="#experience" class="px-3 py-2 rounded-xl hover:text-blue-600 hover:bg-slate-100 transition">Experience</a></li>
+                <li><a href="#contact" class="px-3 py-2 rounded-xl hover:text-blue-600 hover:bg-slate-100 transition">Contact</a></li>
+            </ul>
+
+            <!-- Navigation Actions: Download CV + Hire Me + Mobile Drawer -->
+            <div class="flex items-center gap-2 sm:gap-2.5">
+                <!-- Download CV Action -->
+                <a href="./Zeeshan_Qaisar_Full_Stack_Laravel_Developer_CV.pdf" download="Zeeshan_Qaisar_Full_Stack_Laravel_Developer_CV.pdf" class="hidden sm:inline-flex px-3.5 py-2 rounded-xl text-xs font-mono font-semibold theme-surface-elevated border theme-border items-center gap-1.5 hover:border-blue-500 hover:text-blue-600 transition shadow-sm">
+                    <svg class="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 18h16"/></svg>
+                    <span>Download CV</span>
+                </a>
+
+                <!-- Hire Me Primary 3D Button -->
+                <a href="#contact" class="btn-3d-primary px-3.5 sm:px-4 py-2 rounded-xl font-display font-bold text-xs sm:text-sm tracking-wide flex items-center gap-1.5 shrink-0">
+                    <span>Hire Me</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                </a>
+
+                <!-- Mobile Drawer Button -->
+                <button id="mobileMenuBtn" type="button" aria-label="Toggle Menu" class="xl:hidden p-2 rounded-xl theme-surface-elevated border theme-border theme-text-main hover:bg-slate-100 transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobileMenu" class="hidden xl:hidden max-w-7xl mx-auto mt-2 p-4 rounded-2xl theme-surface backdrop-blur-2xl border theme-border shadow-xl">
+            <ul class="flex flex-col gap-1 text-sm font-medium theme-text-main">
+                <li><a href="#home" class="mobile-nav-link block px-4 py-2.5 rounded-xl hover:bg-slate-100 transition">Home</a></li>
+                <li><a href="#projects" class="mobile-nav-link block px-4 py-2.5 rounded-xl hover:bg-slate-100 transition">Featured Case Studies (Bluelink LMS)</a></li>
+                <li><a href="#skills" class="mobile-nav-link block px-4 py-2.5 rounded-xl hover:bg-slate-100 transition">Technical Skills Matrix</a></li>
+                <li><a href="#experience" class="mobile-nav-link block px-4 py-2.5 rounded-xl hover:bg-slate-100 transition">Professional Experience</a></li>
+                <li><a href="#contact" class="mobile-nav-link block px-4 py-2.5 rounded-xl hover:bg-slate-100 transition">Contact &amp; Direct Links</a></li>
+                <li><a href="./Zeeshan_Qaisar_Full_Stack_Laravel_Developer_CV.pdf" download="Zeeshan_Qaisar_Full_Stack_Laravel_Developer_CV.pdf" class="mobile-nav-link block px-4 py-2.5 rounded-xl hover:bg-slate-100 transition font-bold theme-text-primary">↓ Download CV (PDF)</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         MAIN CONTENT AREA
+    ═══════════════════════════════════════════════════════════════════ -->
+    <main class="relative z-10">
+
+        <!-- ── HERO SECTION: EXECUTIVE PITCH + 3D MULTI-TAB ARCHITECTURE STACK ── -->
+        <section id="home" class="min-h-screen pt-28 pb-20 lg:pt-36 lg:pb-24 flex items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-8 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+
+                    <!-- Left Column (7 Cols) -->
+                    <div class="lg:col-span-7 space-y-6">
+
+                        <!-- Availability Status Badge -->
+                        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full theme-badge-primary">
+                            <span class="relative flex h-2.5 w-2.5">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background-color: var(--primary);"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5" style="background-color: var(--primary);"></span>
+                            </span>
+                            <span class="text-xs font-mono font-semibold tracking-wide uppercase">
+                                Pakistan &bull; Open to International Remote Opportunities
+                            </span>
+                        </div>
+
+                        <!-- Main Executive Headline -->
+                        <h1 class="font-display font-extrabold text-4xl sm:text-6xl xl:text-[4.15rem] tracking-tight leading-[1.06] theme-text-main">
+                            Senior Full Stack <br class="hidden sm:inline" />
+                            <span class="theme-gradient-text">Laravel &amp; React</span>
+                            <span class="block">Developer.</span>
+                        </h1>
+
+                        <!-- Bio Description -->
+                        <p class="text-base sm:text-lg theme-text-body leading-relaxed max-w-2xl">
+                            Hi, I'm <strong class="theme-text-main font-semibold">Zeeshan Qaisar</strong>. With <strong class="theme-text-primary font-semibold">5+ years</strong> of experience architecting, building, and scaling production web applications, RESTful APIs, and business management systems, I pair deep expertise in the <span class="font-mono text-sm theme-text-primary font-semibold">Laravel ecosystem (Laravel 12 / 13+)</span> (Livewire 3, FilamentPHP v3, Eloquent ORM) with modern <span class="font-mono text-sm theme-text-secondary font-semibold">React 19 &amp; Next.js 15</span> frontends.
+                        </p>
+
+                        <!-- Tactile 3D CTA Buttons -->
+                        <div class="flex flex-wrap items-center gap-3.5 pt-2">
+                            <a href="#projects" class="btn-3d-primary px-6 py-3.5 rounded-2xl font-display font-bold text-sm sm:text-base tracking-wide flex items-center gap-2">
+                                <span>View Flagship Work</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+                            </a>
+
+                            <a href="./Zeeshan_Qaisar_Full_Stack_Laravel_Developer_CV.pdf" download="Zeeshan_Qaisar_Full_Stack_Laravel_Developer_CV.pdf" class="btn-3d-secondary px-5 py-3.5 rounded-2xl font-display font-semibold text-sm sm:text-base flex items-center gap-2">
+                                <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 18h16"/></svg>
+                                <span>Download CV</span>
+                            </a>
+
+                            <a href="mailto:mrzeeshan.799@gmail.com" class="btn-3d-secondary px-5 py-3.5 rounded-2xl font-display font-semibold text-sm sm:text-base flex items-center gap-2">
+                                <span>✉ mrzeeshan.799@gmail.com</span>
+                            </a>
+
+                            <a href="https://github.com/zeeshanq799" target="_blank" rel="noopener noreferrer" class="btn-3d-secondary px-4 py-3.5 rounded-2xl font-mono text-xs sm:text-sm flex items-center gap-2">
+                                <svg class="w-4 h-4 theme-text-primary" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                <span>GitHub ↗</span>
+                            </a>
+
+                            <a href="https://www.fiverr.com/s/99v7kkj" target="_blank" rel="noopener noreferrer" class="btn-3d-secondary px-4 py-3.5 rounded-2xl font-mono text-xs sm:text-sm flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                <span>Fiverr (5★ Level 2) ↗</span>
+                            </a>
+                        </div>
+
+                        <!-- 3D Stat Cards -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 scene-3d">
+                            <div class="tilt-card p-4">
+                                <div class="layer-z-20">
+                                    <div class="font-display font-extrabold text-2xl sm:text-3xl theme-text-main">5+ <span class="text-sm theme-text-primary">Yrs</span></div>
+                                    <div class="text-xs theme-text-muted mt-0.5">Production Experience</div>
+                                </div>
+                            </div>
+                            <div class="tilt-card p-4">
+                                <div class="layer-z-20">
+                                    <div class="font-display font-extrabold text-2xl sm:text-3xl theme-text-primary">50+</div>
+                                    <div class="text-xs theme-text-muted mt-0.5">Apps &amp; APIs Shipped</div>
+                                </div>
+                            </div>
+                            <div class="tilt-card p-4">
+                                <div class="layer-z-20">
+                                    <div class="font-display font-extrabold text-2xl sm:text-3xl theme-text-secondary">5.0★</div>
+                                    <div class="text-xs theme-text-muted mt-0.5">Global Client Rating</div>
+                                </div>
+                            </div>
+                            <div class="tilt-card p-4">
+                                <div class="layer-z-20">
+                                    <div class="font-display font-extrabold text-2xl sm:text-3xl theme-text-main">100%</div>
+                                    <div class="text-xs theme-text-muted mt-0.5">Remote Ready</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column (5 Cols): 3D Architecture Showcase -->
+                    <div class="lg:col-span-5 scene-3d flex justify-center">
+                        <div class="tilt-card w-full max-w-lg p-6 sm:p-7 relative select-none">
+
+                            <!-- Floating 3D Badge Top-Right -->
+                            <div class="float-orb-a hidden sm:flex absolute -top-4 -right-4 px-3.5 py-2 rounded-2xl border theme-border shadow-md items-center gap-2 z-30" style="background-color: var(--surface-solid);">
+                                <span class="w-2.5 h-2.5 rounded-full bg-blue-600 animate-ping"></span>
+                                <span class="font-mono text-xs font-semibold theme-text-main">Laravel 13+ &bull; FilamentPHP v3</span>
+                            </div>
+
+                            <!-- Floating 3D Badge Bottom-Left -->
+                            <div class="float-orb-b hidden sm:flex absolute -bottom-4 -left-4 px-3.5 py-2 rounded-2xl border theme-border shadow-md items-center gap-2 z-30" style="background-color: var(--surface-solid);">
+                                <span class="font-mono text-xs font-bold theme-text-secondary">⚡ 99.9% Uptime</span>
+                                <span class="font-mono text-xs theme-text-muted">&bull; React 19 / Next.js 15</span>
+                            </div>
+
+                            <!-- Executive Profile Header inside Card (Layer Z-30) -->
+                            <div class="layer-z-30 flex items-center justify-between gap-3 pb-4 border-b theme-border">
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-14 h-14 rounded-2xl p-[2px] shadow-sm" style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+                                        <div class="w-full h-full rounded-[14px] flex items-center justify-center font-display font-extrabold text-xl" style="background-color: var(--surface-solid); color: var(--text);">
+                                            ZQ
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center gap-2">
+                                            <h2 class="font-display font-bold text-lg theme-text-main">Zeeshan Qaisar</h2>
+                                            <span class="px-2 py-0.5 text-[10px] font-mono font-bold rounded-full theme-badge-primary">ARCHITECT</span>
+                                        </div>
+                                        <p class="text-xs theme-text-muted">Full Stack Laravel &amp; React Engineer</p>
+                                    </div>
+                                </div>
+                                <a href="https://incomefromviews.com/" target="_blank" rel="noopener noreferrer" class="text-[11px] font-mono theme-text-primary hover:underline hidden sm:block">
+                                    incomefromviews.com ↗
+                                </a>
+                            </div>
+
+                            <!-- Interactive Multi-Tab 3D Code Pipeline (Layer Z-40) -->
+                            <div class="layer-z-40 my-5 rounded-2xl overflow-hidden border border-slate-700/50 shadow-xl" style="background-color: var(--terminal-bg);">
+                                <!-- Terminal Top Bar & Interactive File Tabs -->
+                                <div class="flex items-center justify-between px-3.5 pt-2.5 bg-slate-800/60 border-b border-slate-700/50 overflow-x-auto">
+                                    <div class="flex items-center gap-1.5 mr-3 pb-2">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                                    </div>
+                                    <div class="flex items-center gap-1 text-[11px] font-mono text-slate-400 shrink-0">
+                                        <button type="button" data-code-tab="sanctum" class="code-tab active px-2.5 py-1.5 rounded-t-lg transition">
+                                            VerifySanctumAuth.php
+                                        </button>
+                                        <button type="button" data-code-tab="controller" class="code-tab px-2.5 py-1.5 rounded-t-lg transition">
+                                            CourseController.php
+                                        </button>
+                                        <button type="button" data-code-tab="react" class="code-tab px-2.5 py-1.5 rounded-t-lg transition">
+                                            useStudentAnalytics.ts
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Code Pane 1: VerifySanctumAuth.php -->
+                                <div id="code-pane-sanctum" class="code-pane p-4 font-mono text-[11px] sm:text-xs text-slate-200 leading-relaxed space-y-1">
+                                    <div class="text-slate-400">// Decoupled API Auth &amp; Role-Based Access Control</div>
+                                    <div><span class="text-rose-400">public function</span> <span class="text-sky-300">handle</span>(<span class="text-emerald-300">Request</span> $request, <span class="text-emerald-300">Closure</span> $next)</div>
+                                    <div>{</div>
+                                    <div class="pl-4"><span class="text-rose-400">if</span> (! $request-&gt;<span class="text-sky-300">user</span>()-&gt;<span class="text-sky-300">tokenCan</span>(<span class="text-amber-300">'lms:instructor'</span>)) {</div>
+                                    <div class="pl-8"><span class="text-rose-400">abort</span>(<span class="text-purple-300">403</span>, <span class="text-amber-300">'Unauthorized RBAC Scope'</span>);</div>
+                                    <div class="pl-4">}</div>
+                                    <div class="pl-4"><span class="text-rose-400">return</span> $next($request);</div>
+                                    <div>}</div>
+                                </div>
+
+                                <!-- Code Pane 2: CourseController.php -->
+                                <div id="code-pane-controller" class="code-pane hidden p-4 font-mono text-[11px] sm:text-xs text-slate-200 leading-relaxed space-y-1">
+                                    <div class="text-slate-400">// Bluelink LMS — Optimized Eloquent Query Pipeline</div>
+                                    <div><span class="text-rose-400">public function</span> <span class="text-sky-300">index</span>(<span class="text-emerald-300">CourseFilter</span> $filter): <span class="text-emerald-300">JsonResponse</span></div>
+                                    <div>{</div>
+                                    <div class="pl-4">$courses = <span class="text-emerald-300">Course</span>::<span class="text-sky-300">with</span>([<span class="text-amber-300">'modules'</span>, <span class="text-amber-300">'instructor:id,name'</span>])</div>
+                                    <div class="pl-8">-&gt;<span class="text-sky-300">withCount</span>(<span class="text-amber-300">'enrolledStudents'</span>)</div>
+                                    <div class="pl-8">-&gt;<span class="text-sky-300">filter</span>($filter)-&gt;<span class="text-sky-300">paginate</span>(<span class="text-purple-300">15</span>);</div>
+                                    <div class="pl-4"><span class="text-rose-400">return</span> <span class="text-emerald-300">CourseResource</span>::<span class="text-sky-300">collection</span>($courses);</div>
+                                    <div>}</div>
+                                </div>
+
+                                <!-- Code Pane 3: useStudentAnalytics.ts -->
+                                <div id="code-pane-react" class="code-pane hidden p-4 font-mono text-[11px] sm:text-xs text-slate-200 leading-relaxed space-y-1">
+                                    <div class="text-slate-400">// React 19 / Next.js 15 Type-Safe Data Synchronization</div>
+                                    <div><span class="text-rose-400">export const</span> <span class="text-sky-300">useStudentAnalytics</span> = (courseId: <span class="text-emerald-300">string</span>) =&gt; {</div>
+                                    <div class="pl-4"><span class="text-rose-400">return</span> <span class="text-sky-300">useQuery</span>&lt;<span class="text-emerald-300">AnalyticsPayload</span>&gt;({</div>
+                                    <div class="pl-8">queryKey: [<span class="text-amber-300">'lms-analytics'</span>, courseId],</div>
+                                    <div class="pl-8">queryFn: () =&gt; api.<span class="text-sky-300">get</span>(`/v1/courses/${courseId}/metrics`),</div>
+                                    <div class="pl-8">staleTime: <span class="text-purple-300">60_000</span>,</div>
+                                    <div class="pl-4">});</div>
+                                    <div>};</div>
+                                </div>
+                            </div>
+
+                            <!-- Core Specialization Pills (Layer Z-30) -->
+                            <div class="layer-z-30 grid grid-cols-2 gap-2 text-xs font-medium">
+                                <div class="p-2.5 rounded-xl theme-surface-elevated border theme-border flex items-center gap-2 theme-text-main shadow-sm">
+                                    <span class="w-2 h-2 rounded-full" style="background-color: var(--primary);"></span>
+                                    <span>Laravel 13+ &bull; Filament v3</span>
+                                </div>
+                                <div class="p-2.5 rounded-xl theme-surface-elevated border theme-border flex items-center gap-2 theme-text-main shadow-sm">
+                                    <span class="w-2 h-2 rounded-full" style="background-color: var(--secondary);"></span>
+                                    <span>React 19 &bull; Next.js 15</span>
+                                </div>
+                                <div class="p-2.5 rounded-xl theme-surface-elevated border theme-border flex items-center gap-2 theme-text-main shadow-sm">
+                                    <span class="w-2 h-2 rounded-full" style="background-color: var(--tertiary);"></span>
+                                    <span>MySQL &bull; PostgreSQL &bull; RBAC</span>
+                                </div>
+                                <div class="p-2.5 rounded-xl theme-surface-elevated border theme-border flex items-center gap-2 theme-text-main shadow-sm">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                    <span>Stripe &bull; PayPal &bull; Webhooks</span>
+                                </div>
+                            </div>
+
+                            <!-- Card Footer Contact Strip (Layer Z-20) -->
+                            <div class="layer-z-20 mt-4 pt-3.5 border-t theme-border flex items-center justify-between text-xs font-mono">
+                                <span class="theme-text-muted">📞 +92 305 8663799</span>
+                                <a href="https://github.com/zeeshanq799" target="_blank" rel="noopener noreferrer" class="theme-text-primary font-semibold hover:underline">
+                                    github.com/zeeshanq799 →
                                 </a>
                             </div>
                         </div>
-                        <div class="hero-avail-badge">
-                            <span class="avail-dot"></span>Open to new opportunities
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             FEATURED CASE STUDIES — BLUELINK ADVISORY #1 AT TOP
+        ═══════════════════════════════════════════════════════════════════ -->
+        <section id="projects" class="py-24 relative theme-bg-alt border-y theme-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+                <!-- Header & Filter Bar -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+                    <div>
+                        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest theme-text-primary mb-2.5">
+                            <span class="w-6 h-[1.5px]" style="background-color: var(--primary);"></span>
+                            Selected Production Work
                         </div>
+                        <h2 class="font-display font-extrabold text-3xl sm:text-5xl theme-text-main tracking-tight">
+                            Featured Case Studies
+                        </h2>
+                        <p class="theme-text-muted text-sm sm:text-base mt-2 max-w-xl">
+                            Every platform below is live in production, architected for reliability, clean database relationships, and seamless user experience.
+                        </p>
+                    </div>
+
+                    <!-- Category Filter Buttons -->
+                    <div class="flex flex-wrap gap-2" role="tablist" aria-label="Filter projects by technology">
+                        <button type="button" data-filter="all" class="filter-btn active px-4 py-2 rounded-xl text-xs font-mono font-semibold border theme-border theme-text-body transition">
+                            All Projects (4)
+                        </button>
+                        <button type="button" data-filter="laravel" class="filter-btn px-4 py-2 rounded-xl text-xs font-mono font-semibold border theme-border theme-text-body transition">
+                            Laravel &amp; LMS
+                        </button>
+                        <button type="button" data-filter="nextjs" class="filter-btn px-4 py-2 rounded-xl text-xs font-mono font-semibold border theme-border theme-text-body transition">
+                            Next.js &amp; React
+                        </button>
+                        <button type="button" data-filter="enterprise" class="filter-btn px-4 py-2 rounded-xl text-xs font-mono font-semibold border theme-border theme-text-body transition">
+                            Healthcare &amp; Finance
+                        </button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <div class="section-divider"></div>
+                <!-- 3D Case Studies Container -->
+                <div class="space-y-10 scene-3d">
 
-    <!-- ══ ABOUT / STATS ═══════════════════════════ -->
-    <section id="about" class="section" aria-label="About">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">About Me</div>
-                <h2 class="section-title">Building for 5+ years,<br>shipping every day.</h2>
-                <p class="section-subtitle">From backend APIs to browser automation — I cover the full spectrum of web
-                    development with a strong focus on clean code, performance, and business impact.</p>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card pf-animate">
-                    <div class="stat-icon" aria-hidden="true">🎯</div>
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Years of experience</div>
-                </div>
-                <div class="stat-card pf-animate">
-                    <div class="stat-icon" aria-hidden="true">😊</div>
-                    <div class="stat-number">100+</div>
-                    <div class="stat-label">Happy clients</div>
-                </div>
-                <div class="stat-card pf-animate">
-                    <div class="stat-icon" aria-hidden="true">🚀</div>
-                    <div class="stat-number">200+</div>
-                    <div class="stat-label">Projects completed</div>
-                </div>
-                <div class="stat-card pf-animate">
-                    <div class="stat-icon" aria-hidden="true">⭐</div>
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Available support</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- ══ SKILLS ══════════════════════════════════ -->
-    <section id="skills" class="section section-alt" aria-label="Skills">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">My Expertise</div>
-                <h2 class="section-title">Technical Skills</h2>
-                <p class="section-subtitle">Technologies I work with every day to build fast, reliable, and scalable
-                    products.</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card pf-animate">
-                    <div class="skill-card-icon" aria-hidden="true">🎨</div>
-                    <h3 class="skill-card-title">Frontend Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React JS</span>
-                        <span class="skill-tag">Vue JS</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">Bootstrap</span>
-                        <span class="skill-tag">Tailwind</span>
-                        <span class="skill-tag">jQuery</span>
-                        <span class="skill-tag">AJAX</span>
-                        <span class="skill-tag">Livewire</span>
-                    </div>
-                </div>
-                <div class="skill-card pf-animate">
-                    <div class="skill-card-icon" aria-hidden="true">⚙️</div>
-                    <h3 class="skill-card-title">Backend Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">PHP</span>
-                        <span class="skill-tag">Laravel</span>
-                        <span class="skill-tag">CodeIgniter</span>
-                        <span class="skill-tag">RESTful APIs</span>
-                        <span class="skill-tag">GraphQL</span>
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                    </div>
-                </div>
-                <div class="skill-card pf-animate">
-                    <div class="skill-card-icon" aria-hidden="true">🔌</div>
-                    <h3 class="skill-card-title">Integrations &amp; Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">PayPal</span>
-                        <span class="skill-tag">Stripe</span>
-                        <span class="skill-tag">Google Pay</span>
-                        <span class="skill-tag">OAuth</span>
-                        <span class="skill-tag">Facebook API</span>
-                        <span class="skill-tag">Google API</span>
-                        <span class="skill-tag">GitHub</span>
-                        <span class="skill-tag">Git</span>
-                    </div>
-                </div>
-                <div class="skill-card pf-animate skill-card-ai">
-                    <div class="skill-card-icon" aria-hidden="true">🤖</div>
-                    <h3 class="skill-card-title">AI &amp; Automation</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag skill-tag-ai">n8n</span>
-                        <span class="skill-tag skill-tag-ai">Automa</span>
-                        <span class="skill-tag skill-tag-ai">Axiom.ai</span>
-                        <span class="skill-tag skill-tag-ai">OpenAI API</span>
-                        <span class="skill-tag skill-tag-ai">Claude API</span>
-                        <span class="skill-tag skill-tag-ai">AI Workflows</span>
-                        <span class="skill-tag skill-tag-ai">Prompt Engineering</span>
-                        <span class="skill-tag skill-tag-ai">Web Scraping</span>
-                        <span class="skill-tag skill-tag-ai">Webhook Integration</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- ══ AUTOMATION & AI ══════════════════════════ -->
-    <section id="automation" class="section" aria-label="Automation and AI workflows">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Automation &amp; AI</div>
-                <h2 class="section-title">Smart Workflows<br>That Work While You Sleep</h2>
-                <p class="section-subtitle">Automation pipelines that reduce repetitive workload, connect your tools,
-                    and let AI do the heavy lifting — all without manual intervention.</p>
-            </div>
-
-            <!-- Core automation services -->
-            <div class="services-grid" style="margin-bottom:40px;">
-                <div class="service-card pf-animate">
-                    <div class="service-num">01</div>
-                    <h3 class="service-title">n8n Workflow Automation</h3>
-                    <p class="service-desc">Lead routing, CRM syncing, notifications, data processing, and connecting
-                        multiple apps using REST &amp; GraphQL APIs. Cuts repetitive manual tasks dramatically.</p>
-                </div>
-                <div class="service-card pf-animate">
-                    <div class="service-num">02</div>
-                    <h3 class="service-title">Browser Bot Automation</h3>
-                    <p class="service-desc">Advanced browser automation using <strong
-                            style="color:var(--text)">Automa</strong> and <strong
-                            style="color:var(--text)">Axiom.ai</strong> for product uploads, form submissions, web
-                        scraping, and operational workflows.</p>
-                </div>
-                <div class="service-card pf-animate">
-                    <div class="service-num">03</div>
-                    <h3 class="service-title">AI API Integrations</h3>
-                    <p class="service-desc">Integration of AI APIs into websites and systems — enabling smart responses,
-                        auto-processing, customer support logic, and dynamic content generation.</p>
-                </div>
-                <div class="service-card pf-animate">
-                    <div class="service-num">04</div>
-                    <h3 class="service-title">Task &amp; Operations Automation</h3>
-                    <p class="service-desc">End-to-end automation for business operations: workflow triggers, data
-                        movement, notifications, reporting, and system optimization.</p>
-                </div>
-            </div>
-
-            <!-- Automation project examples -->
-            <div class="section-label" style="margin-bottom:24px;">Real-World Automation Projects</div>
-            <div class="services-grid services-grid-2">
-                <div class="service-card pf-animate">
-                    <div class="service-num">A1</div>
-                    <h3 class="service-title">AI YouTube Content Factory</h3>
-                    <p class="service-desc">
-                        Automated content generation pipeline using n8n + LLMs.<br><br>
-                        → Generates titles, descriptions, tags &amp; scripts from a single topic<br>
-                        → Outputs saved to Sheets/DB + delivered via email/Telegram<br>
-                        → Reduced content creation time by <strong style="color:var(--teal)">90%</strong>
-                    </p>
-                    <div class="service-tech">Stack: n8n · OpenAI/Claude · Webhooks · Google Sheets · Laravel</div>
-                </div>
-                <div class="service-card pf-animate">
-                    <div class="service-num">A2</div>
-                    <h3 class="service-title">AI Invoice Automation System</h3>
-                    <p class="service-desc">
-                        Fully automated invoice generation workflow integrated with Laravel.<br><br>
-                        → Order received → AI formatting → PDF generation → auto email<br>
-                        → Stores invoices in Google Drive + logs metadata in database<br>
-                        → Saves hours of repetitive finance &amp; admin work
-                    </p>
-                    <div class="service-tech">Stack: n8n · LLM API · MySQL · PDF Generator · Laravel</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- ══ SERVICES ═════════════════════════════════ -->
-    <section id="services" class="section section-alt" aria-label="Services">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">What I Offer</div>
-                <h2 class="section-title">Professional Services</h2>
-                <p class="section-subtitle">End-to-end development services tailored to your business needs — from
-                    concept to deployment and beyond.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card pf-animate">
-                    <div class="service-num">01</div>
-                    <h3 class="service-title">Full Stack Development</h3>
-                    <p class="service-desc">Complete web application development from concept to deployment, using
-                        modern technologies and best practices for optimal performance.</p>
-                </div>
-                <div class="service-card pf-animate">
-                    <div class="service-num">02</div>
-                    <h3 class="service-title">API Development</h3>
-                    <p class="service-desc">RESTful and GraphQL API design, development, and integration for seamless
-                        data communication between systems.</p>
-                </div>
-                <div class="service-card pf-animate">
-                    <div class="service-num">03</div>
-                    <h3 class="service-title">E-commerce Solutions</h3>
-                    <p class="service-desc">Custom e-commerce platforms with secure payment integration, product
-                        management, inventory tracking, and analytics.</p>
-                </div>
-                <div class="service-card pf-animate">
-                    <div class="service-num">04</div>
-                    <h3 class="service-title">Website Redesign</h3>
-                    <p class="service-desc">Modern UI/UX improvements, performance optimization, responsive design, and
-                        complete website makeovers.</p>
-                </div>
-                <div class="service-card pf-animate">
-                    <div class="service-num">05</div>
-                    <h3 class="service-title">Payment Integration</h3>
-                    <p class="service-desc">Secure integration of PayPal, Stripe, Google Pay, and other payment gateways
-                        with PCI compliance.</p>
-                </div>
-                <div class="service-card pf-animate">
-                    <div class="service-num">06</div>
-                    <h3 class="service-title">Maintenance &amp; Support</h3>
-                    <p class="service-desc">Ongoing website maintenance, bug fixes, security updates, performance
-                        monitoring, and 24/7 technical support.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- ══ PROJECTS / CASE STUDIES ══════════════════ -->
-    <section id="projects" class="section" aria-label="Projects and case studies">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Featured Projects</div>
-                <h2 class="section-title">Real Work,<br>Real Results.</h2>
-                <p class="section-subtitle">End-to-end case studies showing the problem, solution, and measurable
-                    business impact.</p>
-            </div>
-
-            <!-- ── Project 1: Heelas Healthcare ── -->
-            <div class="project-card pf-animate" style="margin-bottom:32px;">
-                <div class="project-card-header">
-                    <div class="project-card-meta">
-                        <span class="project-badge">Healthcare</span>
-                        <span class="project-badge"
-                            style="background:var(--teal-dim);border-color:rgba(0,212,170,0.2);color:var(--teal)">Laravel</span>
-                        <a href="https://laravel.heelashealthcare.com" target="_blank" rel="noopener"
-                            class="project-link-badge">Visit Live Site →</a>
-                    </div>
-                    <h3 class="project-title">Heelas Healthcare — Home Health Care Agency Platform</h3>
-                    <p class="project-desc">A fully custom Laravel-based healthcare website with appointment scheduling,
-                        service pages, insurance details, and a powerful admin panel. Designed for performance,
-                        accessibility, and trust-building.</p>
-                </div>
-                <div class="project-card-body">
-                    <div class="case-study-grid">
-                        <div>
-                            <div class="col-label" style="color:var(--amber)">❗ Challenges Before</div>
-                            <div class="case-list">
-                                <div class="case-list-item">No online appointment system — 30% of staff time on manual
-                                    scheduling</div>
-                                <div class="case-list-item">No structured contact tracking — ~40% of leads not converted
-                                </div>
-                                <div class="case-list-item">Manual career applications via email — hiring took 2–3 weeks
-                                    per role</div>
-                                <div class="case-list-item">Scattered, outdated business information reducing
-                                    credibility</div>
-                                <div class="case-list-item">No admin dashboard or data visibility for decision-making
-                                </div>
-                                <div class="case-list-item">No access control, data security issues, and bot spam</div>
+                    <!-- ── 1. BLUELINK ADVISORY (TOP #1 FLAGSHIP PROJECT) ── -->
+                    <article data-category="laravel" class="project-item tilt-card p-6 sm:p-10 relative overflow-hidden">
+                        <!-- Top Meta Ribbon -->
+                        <div class="layer-z-30 flex flex-wrap items-center justify-between gap-4 pb-6 mb-7 border-b theme-border">
+                            <div class="flex flex-wrap items-center gap-2.5">
+                                <span class="px-3.5 py-1 rounded-full text-xs font-mono font-bold text-white shadow-sm" style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+                                    ★ #1 FLAGSHIP &bull; MOST RECENT
+                                </span>
+                                <span class="px-3.5 py-1 rounded-full text-xs font-mono font-semibold theme-badge-primary">
+                                    LMS &amp; EdTech Platform
+                                </span>
+                                <span class="px-3.5 py-1 rounded-full text-xs font-mono theme-surface-elevated border theme-border theme-text-body">
+                                    Laravel 12 &bull; MySQL &bull; REST APIs &bull; RBAC &bull; reCAPTCHA
+                                </span>
                             </div>
-                        </div>
-                        <div>
-                            <div class="col-label" style="color:var(--teal)">✓ Solutions Delivered</div>
-                            <div class="case-list">
-                                <div class="case-list-item case-sol-item">24/7 online booking with instant
-                                    confirmations, reminders &amp; rescheduling</div>
-                                <div class="case-list-item case-sol-item">Automated lead capture with real-time admin
-                                    notifications</div>
-                                <div class="case-list-item case-sol-item">Centralized admin dashboard — appointments,
-                                    contacts, users, settings</div>
-                                <div class="case-list-item case-sol-item">Dynamic CMS — update all content, SEO,
-                                    branding without coding</div>
-                                <div class="case-list-item case-sol-item">Bot protection, role-based access, secure auth
-                                    &amp; data encryption</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-label" style="margin-bottom:16px;">📊 Business Impact</div>
-                    <div class="impact-grid">
-                        <div class="impact-card">
-                            <div class="impact-num">70%</div>
-                            <div class="impact-label">Faster scheduling</div>
-                        </div>
-                        <div class="impact-card">
-                            <div class="impact-num">60%</div>
-                            <div class="impact-label">Lower admin work</div>
-                        </div>
-                        <div class="impact-card">
-                            <div class="impact-num">50%</div>
-                            <div class="impact-label">More lead conversions</div>
-                        </div>
-                        <div class="impact-card">
-                            <div class="impact-num">90%</div>
-                            <div class="impact-label">Fewer no-shows</div>
-                        </div>
-                        <div class="impact-card">
-                            <div class="impact-num">100%</div>
-                            <div class="impact-label">Bot protection</div>
-                        </div>
-                        <div class="impact-card">
-                            <div class="impact-num">24/7</div>
-                            <div class="impact-label">Online availability</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- ── Project 2: CityLink Chauffeurs ── -->
-            <div class="project-card pf-animate">
-                <div class="project-card-header">
-                    <div class="project-card-meta">
-                        <span class="project-badge">Luxury Transport</span>
-                        <span class="project-badge"
-                            style="background:var(--teal-dim);border-color:rgba(0,212,170,0.2);color:var(--teal)">Laravel</span>
-                        <a href="https://citylinkchauffeurs.com" target="_blank" rel="noopener"
-                            class="project-link-badge">Visit Live Site →</a>
-                    </div>
-                    <h3 class="project-title">CityLink Chauffeurs — Luxury Transport Booking Platform</h3>
-                    <p class="project-desc">A complete limousine &amp; black-car booking platform with vehicle listings,
-                        dynamic pricing logic, ride scheduling, and user dashboard. Built with Laravel and an elegant
-                        dynamic frontend.</p>
-                </div>
-                <div class="project-card-body">
-                    <div class="case-study-grid">
-                        <div>
-                            <div class="col-label" style="color:var(--amber)">❗ Challenges Before</div>
-                            <div class="case-list">
-                                <div class="case-list-item">Bookings via calls only — high workload and slow responses
-                                </div>
-                                <div class="case-list-item">No online reservation form — lost bookings and low
-                                    convenience</div>
-                                <div class="case-list-item">Scattered, untracked customer inquiries — missed leads</div>
-                                <div class="case-list-item">No vehicle management portal — inconsistent information
-                                </div>
-                                <div class="case-list-item">No dynamic fare calculation — difficult quoting process
-                                </div>
-                                <div class="case-list-item">No centralized admin control panel</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="col-label" style="color:var(--teal)">✓ Solutions Delivered</div>
-                            <div class="case-list">
-                                <div class="case-list-item case-sol-item">Full booking flow: service → date → stops →
-                                    fare → instant confirmation</div>
-                                <div class="case-list-item case-sol-item">Dynamic fare engine: distance, passengers,
-                                    luggage, vehicle type</div>
-                                <div class="case-list-item case-sol-item">Elegant vehicle showcase with photos, features
-                                    &amp; service categories</div>
-                                <div class="case-list-item case-sol-item">Centralized admin: bookings, vehicles, pricing
-                                    &amp; customer messages</div>
-                                <div class="case-list-item case-sol-item">Mobile-optimized design with premium chauffeur
-                                    branding</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-label" style="margin-bottom:16px;">📊 Business Impact</div>
-                    <div class="impact-grid">
-                        <div class="impact-card">
-                            <div class="impact-num">40%</div>
-                            <div class="impact-label">More online bookings</div>
-                        </div>
-                        <div class="impact-card">
-                            <div class="impact-num">60%</div>
-                            <div class="impact-label">Faster inquiry handling</div>
-                        </div>
-                        <div class="impact-card">
-                            <div class="impact-num">↑</div>
-                            <div class="impact-label">Lead conversion rate</div>
-                        </div>
-                        <div class="impact-card">
-                            <div class="impact-num">24/7</div>
-                            <div class="impact-label">Booking availability</div>
-                        </div>
-                        <div class="impact-card">
-                            <div class="impact-num">100%</div>
-                            <div class="impact-label">Consistent vehicle data</div>
-                        </div>
-                        <div class="impact-card">
-                            <div class="impact-num">★★★★★</div>
-                            <div class="impact-label">Brand perception</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- ══ EXPERIENCE ══════════════════════════════ -->
-    <section id="experience" class="section section-alt" aria-label="Work experience">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">My Journey</div>
-                <h2 class="section-title">Work Experience</h2>
-                <p class="section-subtitle">5+ years of professional milestones across remote positions, freelance
-                    platforms, and software companies.</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item pf-animate">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">November 2020 — Present</div>
-                        <div class="timeline-title">Freelance Web Developer</div>
-                        <div class="timeline-company-row">
-                            <span class="timeline-company">Fiverr</span>
-                            <a href="https://www.fiverr.com/s/99v7kkj" target="_blank" rel="noopener"
-                                class="timeline-profile-link" aria-label="View Fiverr Profile">
-                                View Profile →
+                            <a href="https://bluelinkadvisory.com/" target="_blank" rel="noopener noreferrer" class="btn-3d-primary px-5 py-2.5 rounded-xl font-display font-bold text-xs sm:text-sm flex items-center gap-2">
+                                <span>Visit bluelinkadvisory.com</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                             </a>
                         </div>
-                        <div class="timeline-location">📍 Pakistan</div>
-                        <p class="timeline-description">Successfully completed 100+ projects for clients worldwide,
-                            maintaining a 5-star rating through exceptional quality delivery, clear communication, and
-                            timely project completion.</p>
-                    </div>
-                </div>
-                <div class="timeline-item pf-animate">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">August 2022 — Dec 22025</div>
-                        <div class="timeline-title">Remote Full Stack Developer</div>
-                        <div class="timeline-company">Gorin Systems</div>
-                        <div class="timeline-location">📍 United States (Remote)</div>
-                        <p class="timeline-description">Leading full-stack development projects with cutting-edge
-                            technologies, delivering scalable enterprise solutions for international clients across
-                            various industries.</p>
-                    </div>
-                </div>
-                <div class="timeline-item pf-animate">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">August 2021 — August 2022</div>
-                        <div class="timeline-title">Software Engineer</div>
-                        <div class="timeline-company">BJS Soft Solution Private Limited</div>
-                        <div class="timeline-location">📍 Lahore, Punjab, Pakistan</div>
-                        <p class="timeline-description">Developed enterprise-level applications and contributed to team
-                            projects using modern development practices, Agile methodologies, and collaborative
-                            workflows.</p>
-                    </div>
-                </div>
-                <div class="timeline-item pf-animate">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">June 2021 — July 2021</div>
-                        <div class="timeline-title">Online Instructor</div>
-                        <div class="timeline-company">Enablers</div>
-                        <div class="timeline-location">📍 Punjab, Pakistan</div>
-                        <p class="timeline-description">Taught web development fundamentals to aspiring developers,
-                            covering HTML, CSS, JavaScript, and PHP programming in structured online sessions.</p>
-                    </div>
-                </div>
-                <div class="timeline-item pf-animate">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">September 2019 — July 2021</div>
-                        <div class="timeline-title">Web Developer</div>
-                        <div class="timeline-company">Techndevs</div>
-                        <div class="timeline-location">📍 Sargodha, Pakistan</div>
-                        <p class="timeline-description">Specialized in backend development using PHP, CodeIgniter, and
-                            Laravel frameworks, delivering robust and scalable web solutions for diverse client
-                            requirements.</p>
+
+                        <!-- Main Content Grid -->
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                            <div class="lg:col-span-7 space-y-5 layer-z-20">
+                                <h3 class="font-display font-extrabold text-2xl sm:text-4xl theme-text-main tracking-tight">
+                                    Bluelink Advisory — Learning Management System (LMS) &amp; EdTech Platform
+                                </h3>
+                                <p class="theme-text-body text-sm sm:text-base leading-relaxed">
+                                    Architected and developed a comprehensive LMS platform from scratch using <strong class="theme-text-main">Laravel 12</strong> and <strong class="theme-text-main">MySQL</strong> to manage curriculum delivery, course modules, and student learning activities. Built with multi-tier Role-Based Access Control and real-time AI virtual-teacher capabilities.
+                                </p>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+                                    <div class="p-4 rounded-2xl theme-surface-elevated border theme-border shadow-sm">
+                                        <div class="font-mono text-xs font-bold uppercase theme-text-primary mb-1">01. Role-Based Access (RBAC)</div>
+                                        <p class="text-xs theme-text-body leading-relaxed">
+                                            Engineered administrative dashboards and permission scopes for instructors, student enrollments, and progress tracking.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 rounded-2xl theme-surface-elevated border theme-border shadow-sm">
+                                        <div class="font-mono text-xs font-bold uppercase theme-text-secondary mb-1">02. AI Virtual-Teacher Widget</div>
+                                        <p class="text-xs theme-text-body leading-relaxed">
+                                            Integrated an interactive third-party AI virtual-teacher widget directly into the live student learning experience.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 rounded-2xl theme-surface-elevated border theme-border shadow-sm">
+                                        <div class="font-mono text-xs font-bold uppercase theme-text-primary mb-1">03. Curriculum &amp; Course Engine</div>
+                                        <p class="text-xs theme-text-body leading-relaxed">
+                                            Designed relational MySQL schemas for structured lessons, interactive assessments, and student activity logs.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 rounded-2xl theme-surface-elevated border theme-border shadow-sm">
+                                        <div class="font-mono text-xs font-bold uppercase theme-text-secondary mb-1">04. Security &amp; Workflows</div>
+                                        <p class="text-xs theme-text-body leading-relaxed">
+                                            Implemented Google reCAPTCHA security, input sanitization, and automated platform notification workflows.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3D Visual LMS Architecture Stack (Layer Z-40) -->
+                            <div class="lg:col-span-5 layer-z-40">
+                                <div class="rounded-2xl p-5 border border-slate-700/50 shadow-xl space-y-4" style="background-color: var(--terminal-bg);">
+                                    <div class="flex items-center justify-between border-b border-slate-700/50 pb-3">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-2.5 h-2.5 rounded-full" style="background-color: var(--primary);"></span>
+                                            <span class="font-mono text-xs font-bold text-white">BLUELINK LMS ARCHITECTURE</span>
+                                        </div>
+                                        <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300">LIVE</span>
+                                    </div>
+
+                                    <div class="space-y-2.5 font-mono text-xs">
+                                        <div class="p-3 rounded-xl bg-slate-800/60 border border-slate-700/50 flex items-center justify-between text-slate-200">
+                                            <span>👨‍🏫 Admin &amp; Instructor Dashboards</span>
+                                            <span class="text-[10px] text-emerald-400">RBAC Guard</span>
+                                        </div>
+                                        <div class="p-3 rounded-xl bg-slate-800/60 border border-slate-700/50 flex items-center justify-between text-slate-200">
+                                            <span>🤖 AI Virtual-Teacher Widget</span>
+                                            <span class="text-[10px] text-sky-400">Embedded SDK</span>
+                                        </div>
+                                        <div class="p-3 rounded-xl bg-slate-800/60 border border-slate-700/50 flex items-center justify-between text-slate-200">
+                                            <span>📚 Curriculum &amp; Student Tracking</span>
+                                            <span class="text-[10px] text-amber-300">Laravel 12 + MySQL</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="pt-2 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                                        <span>https://bluelinkadvisory.com/</span>
+                                        <a href="https://bluelinkadvisory.com/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline font-semibold">Launch Site ↗</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ── SECONDARY 3D CASE STUDIES GRID (3 COLUMNS) ── -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                        <!-- 2. INCOMEFROMVIEWS.COM -->
+                        <article data-category="nextjs" class="project-item tilt-card p-6 sm:p-7 flex flex-col justify-between">
+                            <div class="space-y-4 layer-z-20">
+                                <div class="flex items-center justify-between gap-2">
+                                    <span class="px-3 py-1 rounded-full text-[11px] font-mono font-semibold theme-badge-secondary">
+                                        Next.js 15 &bull; React 19
+                                    </span>
+                                    <a href="https://incomefromviews.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-mono font-bold theme-text-primary hover:underline">
+                                        incomefromviews.com ↗
+                                    </a>
+                                </div>
+
+                                <h3 class="font-display font-bold text-xl sm:text-2xl theme-text-main">
+                                    IncomeFromViews.com — Creator Monetization Platform
+                                </h3>
+
+                                <p class="text-xs sm:text-sm theme-text-body leading-relaxed">
+                                    Architected and launched a creator analytics and monetization platform featuring interactive revenue calculators and programmatic educational content.
+                                </p>
+
+                                <ul class="space-y-2 text-xs theme-text-body pt-1">
+                                    <li class="flex items-start gap-2">
+                                        <span class="theme-text-primary font-bold">✓</span>
+                                        <span>Engineered dynamic country- and niche-based pages using the <strong>Next.js 15 App Router</strong>.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="theme-text-primary font-bold">✓</span>
+                                        <span>Interactive calculator tools for creator RPM/CPM and online income estimation.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="theme-text-primary font-bold">✓</span>
+                                        <span>Implemented SEO metadata, JSON-LD structured data, breadcrumbs &amp; automated XML sitemaps.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="theme-text-primary font-bold">✓</span>
+                                        <span>Configured automated CI/CD build &amp; deployment workflows via <strong>GitHub Actions</strong>.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="layer-z-30 mt-6 pt-4 border-t theme-border flex items-center justify-between">
+                                <span class="text-[11px] font-mono theme-text-muted">Next.js 15 &bull; React 19 &bull; GitHub Actions</span>
+                                <a href="https://incomefromviews.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-display font-bold theme-text-main hover:underline">
+                                    Visit Live →
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- 3. HEELAS HEALTH CARE -->
+                        <article data-category="laravel enterprise" class="project-item tilt-card p-6 sm:p-7 flex flex-col justify-between">
+                            <div class="space-y-4 layer-z-20">
+                                <div class="flex items-center justify-between gap-2">
+                                    <span class="px-3 py-1 rounded-full text-[11px] font-mono font-semibold theme-badge-primary">
+                                        US Healthcare Portal
+                                    </span>
+                                    <a href="https://www.heelashealthcare.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-mono font-bold theme-text-primary hover:underline">
+                                        heelashealthcare.com ↗
+                                    </a>
+                                </div>
+
+                                <h3 class="font-display font-bold text-xl sm:text-2xl theme-text-main">
+                                    Heelas Health Care — Home Healthcare &amp; Booking Platform
+                                </h3>
+
+                                <p class="text-xs sm:text-sm theme-text-body leading-relaxed">
+                                    Developed a full-stack healthcare web platform and backend administrative portal using Laravel and MySQL for a US-based home health agency.
+                                </p>
+
+                                <ul class="space-y-2 text-xs theme-text-body pt-1">
+                                    <li class="flex items-start gap-2">
+                                        <span class="theme-text-primary font-bold">✓</span>
+                                        <span>24/7 online patient appointment scheduling with instant confirmations &amp; admin alerts.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="theme-text-primary font-bold">✓</span>
+                                        <span>Multi-disciplinary care service modules &amp; dynamic CMS content management.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="theme-text-primary font-bold">✓</span>
+                                        <span>70% faster scheduling and 60% reduction in manual administrative workload.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="theme-text-primary font-bold">✓</span>
+                                        <span>100% bot protection via Google reCAPTCHA and role-based access control.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="layer-z-30 mt-6 pt-4 border-t theme-border flex items-center justify-between">
+                                <span class="text-[11px] font-mono theme-text-muted">Laravel 12 / 13+ &bull; MySQL &bull; reCAPTCHA</span>
+                                <a href="https://www.heelashealthcare.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-display font-bold theme-text-main hover:underline">
+                                    Visit Live →
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- 4. LAFTIK CAPITAL & ASOCIATIA GOOFY -->
+                        <article data-category="laravel enterprise" class="project-item tilt-card p-6 sm:p-7 flex flex-col justify-between">
+                            <div class="space-y-4 layer-z-20">
+                                <div class="flex items-center justify-between gap-2">
+                                    <span class="px-3 py-1 rounded-full text-[11px] font-mono font-semibold theme-badge-secondary">
+                                        Finance &amp; Non-Profit
+                                    </span>
+                                    <span class="text-[11px] font-mono theme-text-muted">2 Live Platforms</span>
+                                </div>
+
+                                <h3 class="font-display font-bold text-xl sm:text-2xl theme-text-main">
+                                    Laftik Capital &amp; Asociatia Goofy Web Applications
+                                </h3>
+
+                                <p class="text-xs sm:text-sm theme-text-body leading-relaxed">
+                                    Built full-stack web applications from scratch using Laravel and MySQL for financial advisory (Laftik Capital) and non-profit (Asociatia Goofy) operations.
+                                </p>
+
+                                <ul class="space-y-2 text-xs theme-text-body pt-1">
+                                    <li class="flex items-start gap-2">
+                                        <span class="theme-text-primary font-bold">✓</span>
+                                        <span><strong>Laftik Capital:</strong> Engineered custom administrative back-office, financial service modules, and interactive client forms.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="theme-text-primary font-bold">✓</span>
+                                        <span><strong>Asociatia Goofy:</strong> Implemented donation processing workflows, admin management features, and donor forms.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="theme-text-primary font-bold">✓</span>
+                                        <span>Relational MySQL database design, secure validation, and production deployment.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="layer-z-30 mt-6 pt-4 border-t theme-border flex items-center justify-between text-xs font-mono">
+                                <a href="https://laftikcap.com/" target="_blank" rel="noopener noreferrer" class="theme-text-primary font-bold hover:underline">
+                                    laftikcap.com ↗
+                                </a>
+                                <a href="https://asociatiagoofy.ro/" target="_blank" rel="noopener noreferrer" class="theme-text-secondary font-bold hover:underline">
+                                    asociatiagoofy.ro ↗
+                                </a>
+                            </div>
+                        </article>
+
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="section-divider"></div>
+        <!-- ═══════════════════════════════════════════════════════════════════
+             TECHNICAL SKILLS BENTO GRID (3D HOVER PILLS)
+        ═══════════════════════════════════════════════════════════════════ -->
+        <section id="skills" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
-    <!-- ══ CONTACT / CTA ════════════════════════════ -->
-    <section id="contact" class="section" aria-label="Contact">
-        <div class="container">
-            <div class="cta-box">
-                <div class="cta-inner">
-                    <div class="cta-eyebrow">
-                        <span class="avail-dot"></span>
-                        Available now
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest theme-text-primary mb-2.5">
+                        <span class="w-4 h-[1.5px]" style="background-color: var(--primary);"></span>
+                        Core Competencies
+                        <span class="w-4 h-[1.5px]" style="background-color: var(--primary);"></span>
                     </div>
-                    <h2 class="cta-title">Let's Build Something Amazing</h2>
-                    <p class="cta-desc">Ready to start your next project? I'm available for freelance work, remote
-                        positions, and exciting collaborations. Let's discuss how I can help bring your vision to life.
+                    <h2 class="font-display font-extrabold text-3xl sm:text-5xl theme-text-main tracking-tight">
+                        Technical Skills Matrix
+                    </h2>
+                    <p class="theme-text-muted text-sm sm:text-base mt-2">
+                        Production-tested technologies across backend architecture, reactive frontends, relational databases, and CI/CD deployment.
                     </p>
-                    <div class="cta-buttons">
-                        <a href="mailto:mrzeeshan.799@gmail.com" class="btn btn-primary">Get In Touch</a>
-                        <a href="./Zeeshan_Qaisar_AI_Automation_FullStack_Resume.pdf" download class="btn btn-ghost">↓
-                            Download My CV</a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-7 scene-3d">
+
+                    <!-- Backend & Architecture -->
+                    <div class="tilt-card p-7 sm:p-8">
+                        <div class="layer-z-30 flex items-center gap-3.5 mb-6">
+                            <div class="w-12 h-12 rounded-2xl theme-badge-primary flex items-center justify-center text-2xl">
+                                ⚙️
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-xl theme-text-main">Backend &amp; Architecture</h3>
+                                <p class="text-xs font-mono theme-text-muted">Enterprise PHP, Custom Admin Panels &amp; APIs</p>
+                            </div>
+                        </div>
+                        <div class="layer-z-40 flex flex-wrap gap-2.5">
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">PHP 8.3+</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Laravel 13+</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">FilamentPHP v3</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Livewire 3</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">CodeIgniter</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Eloquent ORM</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">RESTful APIs</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">GraphQL</span>
+                        </div>
                     </div>
-                    <div class="social-links">
-                        <a href="mailto:mrzeeshan.799@gmail.com" class="social-link" aria-label="Send Email"
-                            title="Email">📧</a>
-                        <a href="https://www.linkedin.com/in/zeeshanqaisar-248564173" target="_blank" rel="noopener"
-                            class="social-link" aria-label="LinkedIn Profile" title="LinkedIn">💼</a>
-                        <a href="https://www.fiverr.com/s/99v7kkj" target="_blank" rel="noopener"
-                            class="social-link social-link-fiverr" aria-label="Fiverr Portfolio"
-                            title="Fiverr Portfolio">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path
-                                    d="M14.5 5.5C14.5 6.6 13.6 7.5 12.5 7.5C11.4 7.5 10.5 6.6 10.5 5.5C10.5 4.4 11.4 3.5 12.5 3.5C13.6 3.5 14.5 4.4 14.5 5.5Z"
-                                    fill="currentColor" />
-                                <path
-                                    d="M20 9H15V8C15 7.4 14.6 7 14 7H10C9.4 7 9 7.4 9 8V9H7C6.4 9 6 9.4 6 10C6 10.6 6.4 11 7 11H9V20C9 20.6 9.4 21 10 21C10.6 21 11 20.6 11 20V11H13V20C13 20.6 13.4 21 14 21C14.6 21 15 20.6 15 20V11H20C20.6 11 21 10.6 21 10C21 9.4 20.6 9 20 9Z"
-                                    fill="currentColor" />
-                                <path d="M7 7H4C3.4 7 3 7.4 3 8C3 8.6 3.4 9 4 9H7V7Z" fill="currentColor" />
-                            </svg>
-                        </a>
+
+                    <!-- Frontend & UI -->
+                    <div class="tilt-card p-7 sm:p-8">
+                        <div class="layer-z-30 flex items-center gap-3.5 mb-6">
+                            <div class="w-12 h-12 rounded-2xl theme-badge-secondary flex items-center justify-center text-2xl">
+                                ⚛️
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-xl theme-text-main">Frontend &amp; Modern UI</h3>
+                                <p class="text-xs font-mono theme-text-muted">Component SPAs, Next.js 15 SSR &amp; Styling</p>
+                            </div>
+                        </div>
+                        <div class="layer-z-40 flex flex-wrap gap-2.5">
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">JavaScript (ES6+)</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">TypeScript</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">React 19</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Next.js 15 (App Router)</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Vue.js</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Alpine.js</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Tailwind CSS</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Bootstrap</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">HTML5 / CSS3</span>
+                        </div>
+                    </div>
+
+                    <!-- Databases & Security -->
+                    <div class="tilt-card p-7 sm:p-8">
+                        <div class="layer-z-30 flex items-center gap-3.5 mb-6">
+                            <div class="w-12 h-12 rounded-2xl theme-badge-primary flex items-center justify-center text-2xl">
+                                🗄️
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-xl theme-text-main">Databases &amp; Security</h3>
+                                <p class="text-xs font-mono theme-text-muted">Schema Architecture, Performance &amp; Auth</p>
+                            </div>
+                        </div>
+                        <div class="layer-z-40 flex flex-wrap gap-2.5">
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">MySQL</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">PostgreSQL</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Relational Schema Design</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Eloquent Query Optimization</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Indexing</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Laravel Sanctum</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">JWT &amp; OAuth2</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">RBAC</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">reCAPTCHA</span>
+                        </div>
+                    </div>
+
+                    <!-- Integrations, DevOps & AI Tooling -->
+                    <div class="tilt-card p-7 sm:p-8">
+                        <div class="layer-z-30 flex items-center gap-3.5 mb-6">
+                            <div class="w-12 h-12 rounded-2xl theme-badge-secondary flex items-center justify-center text-2xl">
+                                🚀
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-xl theme-text-main">Integrations, DevOps &amp; AI Tooling</h3>
+                                <p class="text-xs font-mono theme-text-muted">Payments, Cloud Pipelines &amp; AI Engineering</p>
+                            </div>
+                        </div>
+                        <div class="layer-z-40 flex flex-wrap gap-2.5">
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Stripe</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">PayPal</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Webhooks</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">OpenAI API</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Firebase &amp; Twilio</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Docker &amp; Linux VPS</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">GitHub Actions (CI/CD)</span>
+                            <span class="skill-pill-3d px-3.5 py-2 rounded-xl text-xs font-mono font-medium">Cursor &bull; Claude Code &bull; Gemini CLI &bull; Copilot</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             PROFESSIONAL EXPERIENCE & EDUCATION TIMELINE
+        ═══════════════════════════════════════════════════════════════════ -->
+        <section id="experience" class="py-24 relative theme-bg-alt border-t theme-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+                <div class="mb-14">
+                    <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest theme-text-primary mb-2.5">
+                        <span class="w-6 h-[1.5px]" style="background-color: var(--primary);"></span>
+                        Career Track Record
+                    </div>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-5xl theme-text-main tracking-tight">
+                        Professional Experience
+                    </h2>
+                    <p class="theme-text-muted text-sm sm:text-base mt-2 max-w-2xl">
+                        5+ years delivering full-stack applications across US remote engineering teams, global consulting, and software organizations.
+                    </p>
+                </div>
+
+                <div class="space-y-6 scene-3d">
+
+                    <!-- 1. Gorin Systems -->
+                    <div class="tilt-card p-6 sm:p-8">
+                        <div class="layer-z-20 flex flex-col md:flex-row md:items-center justify-between gap-2 pb-4 mb-4 border-b theme-border">
+                            <div class="flex flex-wrap items-center gap-2.5">
+                                <h3 class="font-display font-bold text-xl sm:text-2xl theme-text-main">Full Stack Developer</h3>
+                                <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold theme-badge-primary">
+                                    Gorin Systems &bull; Remote
+                                </span>
+                            </div>
+                            <span class="font-mono text-xs font-semibold theme-text-secondary">August 2022 – December 2025</span>
+                        </div>
+                        <ul class="layer-z-30 space-y-2 text-sm theme-text-body leading-relaxed">
+                            <li class="flex items-start gap-2.5">
+                                <span class="theme-text-primary font-bold">▹</span>
+                                <span>Engineered and maintained core backend architectures and interactive UI modules for <strong>Fello</strong> using <strong>Laravel</strong> and <strong>Livewire</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="theme-text-primary font-bold">▹</span>
+                                <span>Built responsive, component-driven frontend interfaces for <strong>KosherGraphics</strong> using <strong>React.js</strong>, ensuring seamless REST API integration.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="theme-text-primary font-bold">▹</span>
+                                <span>Architected secure REST APIs and payment webhooks, diagnosed production bottlenecks, and optimized complex Eloquent queries.</span>
+                            </li>
+                        </ul>
+                        <div class="layer-z-20 mt-4 pt-3 border-t theme-border text-xs font-mono theme-text-primary">
+                            Key Technologies: PHP &bull; Laravel &bull; Livewire &bull; React.js &bull; REST APIs &bull; MySQL &bull; Payment Gateways &bull; Git
+                        </div>
+                    </div>
+
+                    <!-- 2. Senior Freelance / Independent Consultant -->
+                    <div class="tilt-card p-6 sm:p-8">
+                        <div class="layer-z-20 flex flex-col md:flex-row md:items-center justify-between gap-2 pb-4 mb-4 border-b theme-border">
+                            <div class="flex flex-wrap items-center gap-2.5">
+                                <h3 class="font-display font-bold text-xl sm:text-2xl theme-text-main">Senior Full Stack Web Developer</h3>
+                                <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold theme-badge-secondary">
+                                    Freelance / Independent Consultant &bull; Remote
+                                </span>
+                                <a href="https://www.fiverr.com/s/99v7kkj" target="_blank" rel="noopener noreferrer" class="text-xs font-mono theme-text-primary hover:underline">
+                                    Fiverr Level 2 Profile ↗
+                                </a>
+                            </div>
+                            <span class="font-mono text-xs font-semibold theme-text-primary">November 2020 – Present</span>
+                        </div>
+                        <ul class="layer-z-30 space-y-2 text-sm theme-text-body leading-relaxed">
+                            <li class="flex items-start gap-2.5">
+                                <span class="theme-text-secondary font-bold">▹</span>
+                                <span>Delivered 50+ production web applications, custom <strong>FilamentPHP v3 / Livewire 3</strong> admin panels, and RESTful API backends for global clients.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="theme-text-secondary font-bold">▹</span>
+                                <span>Designed decoupled <strong>Laravel</strong> backends (Sanctum/JWT authentication, RBAC) serving <strong>React 19</strong>, <strong>Next.js 15</strong>, and <strong>Vue.js</strong> frontends with Stripe and PayPal integrations.</span>
+                            </li>
+                        </ul>
+                        <div class="layer-z-20 mt-4 pt-3 border-t theme-border text-xs font-mono theme-text-secondary">
+                            Key Technologies: Laravel 12 / 13+ &bull; FilamentPHP v3 &bull; Livewire 3 &bull; React 19 &bull; Next.js 15 &bull; Tailwind CSS &bull; MySQL &bull; PostgreSQL &bull; Stripe/PayPal
+                        </div>
+                    </div>
+
+                    <!-- 3 & 4: BJS Soft Solution & TechnDevs -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div class="tilt-card p-6 sm:p-7">
+                            <div class="layer-z-20 flex items-center justify-between gap-2 pb-3 mb-3 border-b theme-border">
+                                <div>
+                                    <h3 class="font-display font-bold text-lg theme-text-main">Software Engineer</h3>
+                                    <p class="text-xs font-mono theme-text-primary">BJS Soft Solution</p>
+                                </div>
+                                <span class="font-mono text-xs theme-text-muted">August 2021 – August 2022</span>
+                            </div>
+                            <p class="layer-z-30 text-xs sm:text-sm theme-text-body leading-relaxed">
+                                Developed full-stack web applications using a decoupled <strong>Laravel</strong> backend and <strong>React.js</strong> frontend architecture, designing RESTful APIs, relational database schemas, and secure authentication flows.
+                            </p>
+                            <div class="layer-z-20 mt-4 pt-3 border-t theme-border text-[11px] font-mono theme-text-primary">
+                                Stack: PHP &bull; Laravel &bull; React.js &bull; JavaScript &bull; REST APIs &bull; MySQL
+                            </div>
+                        </div>
+
+                        <div class="tilt-card p-6 sm:p-7">
+                            <div class="layer-z-20 flex items-center justify-between gap-2 pb-3 mb-3 border-b theme-border">
+                                <div>
+                                    <h3 class="font-display font-bold text-lg theme-text-main">Web Developer</h3>
+                                    <p class="text-xs font-mono theme-text-secondary">TechnDevs</p>
+                                </div>
+                                <span class="font-mono text-xs theme-text-muted">September 2019 – July 2021</span>
+                            </div>
+                            <p class="layer-z-30 text-xs sm:text-sm theme-text-body leading-relaxed">
+                                Built and upgraded dynamic web applications using <strong>Core PHP</strong>, <strong>CodeIgniter</strong>, and <strong>Laravel</strong>, migrating legacy modules to structured MVC architectures to improve maintainability.
+                            </p>
+                            <div class="layer-z-20 mt-4 pt-3 border-t theme-border text-[11px] font-mono theme-text-secondary">
+                                Stack: Core PHP &bull; CodeIgniter &bull; Laravel &bull; JavaScript &bull; Bootstrap &bull; MySQL
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Card -->
+                    <div class="tilt-card p-6 sm:p-7">
+                        <div class="layer-z-20 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-2xl theme-badge-primary flex items-center justify-center text-2xl shrink-0">
+                                    🎓
+                                </div>
+                                <div>
+                                    <div class="text-xs font-mono uppercase tracking-wider theme-text-primary">Education</div>
+                                    <h3 class="font-display font-bold text-lg sm:text-xl theme-text-main">
+                                        Bachelor of Science in Computer Science (BSCS)
+                                    </h3>
+                                    <p class="text-xs sm:text-sm theme-text-body">University of Sargodha</p>
+                                </div>
+                            </div>
+                            <div class="sm:text-right font-mono">
+                                <div class="text-xs theme-text-muted">2017 – 2021</div>
+                                <div class="mt-1 inline-block px-3 py-1 rounded-xl theme-badge-primary text-xs font-bold">
+                                    CGPA: 3.27 / 4.00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════════════
+             CONTACT & DIRECT CONNECT (NO LINKEDIN)
+        ═══════════════════════════════════════════════════════════════════ -->
+        <section id="contact" class="py-24 relative">
+            <div class="max-w-5xl mx-auto px-4 sm:px-8 scene-3d">
+                <div class="tilt-card p-8 sm:p-14 text-center relative overflow-hidden">
+
+                    <div class="layer-z-30 max-w-2xl mx-auto space-y-6">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full theme-badge-primary text-xs font-mono font-semibold">
+                            <span class="w-2 h-2 rounded-full animate-ping" style="background-color: var(--primary);"></span>
+                            AVAILABLE FOR INTERNATIONAL REMOTE ROLES &amp; CONTRACTS
+                        </div>
+
+                        <h2 class="font-display font-extrabold text-3xl sm:text-5xl theme-text-main tracking-tight">
+                            Ready to Scale Your Next Production Platform?
+                        </h2>
+
+                        <p class="theme-text-body text-sm sm:text-base leading-relaxed">
+                            Whether you're hiring a Senior Full Stack Laravel &amp; React Developer for your remote engineering team or need an LMS, SaaS, or custom admin architecture built from the ground up—let's connect directly.
+                        </p>
+
+                        <!-- Action Buttons: Direct Email + Download CV + Copy Email -->
+                        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                            <a href="mailto:mrzeeshan.799@gmail.com" class="btn-3d-primary px-7 py-4 rounded-2xl font-display font-bold text-sm sm:text-base flex items-center gap-2.5">
+                                <span>✉ Email: mrzeeshan.799@gmail.com</span>
+                            </a>
+
+                            <a href="./Zeeshan_Qaisar_Full_Stack_Laravel_Developer_CV.pdf" download="Zeeshan_Qaisar_Full_Stack_Laravel_Developer_CV.pdf" class="btn-3d-secondary px-6 py-4 rounded-2xl font-mono text-xs sm:text-sm font-semibold flex items-center gap-2">
+                                <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 18h16"/></svg>
+                                <span>Download CV</span>
+                            </a>
+
+                            <button id="copyEmailBtn" type="button" class="btn-3d-secondary px-6 py-4 rounded-2xl font-mono text-xs sm:text-sm font-semibold flex items-center gap-2">
+                                <span id="copyEmailText">📋 Copy Email</span>
+                            </button>
+                        </div>
+
+                        <!-- 4-Column Clickable Contact Cards (Strictly No LinkedIn) -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 pt-8 text-left font-mono text-xs">
+                            <a href="tel:+923058663799" class="p-4 rounded-2xl theme-surface-elevated border theme-border hover:border-emerald-500 transition flex items-center gap-3 shadow-sm">
+                                <span class="text-xl">📞</span>
+                                <div class="truncate">
+                                    <div class="text-[10px] theme-text-muted uppercase">Phone / WhatsApp</div>
+                                    <div class="theme-text-main font-bold mt-0.5">+92 305 8663799</div>
+                                </div>
+                            </a>
+
+                            <a href="https://incomefromviews.com/" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl theme-surface-elevated border theme-border hover:border-blue-500 transition flex items-center gap-3 shadow-sm">
+                                <span class="text-xl">🌐</span>
+                                <div class="truncate">
+                                    <div class="text-[10px] theme-text-muted uppercase">Website</div>
+                                    <div class="theme-text-primary font-bold mt-0.5 truncate">incomefromviews.com ↗</div>
+                                </div>
+                            </a>
+
+                            <a href="https://github.com/zeeshanq799" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl theme-surface-elevated border theme-border hover:border-indigo-500 transition flex items-center gap-3 shadow-sm">
+                                <span class="text-xl">🐙</span>
+                                <div class="truncate">
+                                    <div class="text-[10px] theme-text-muted uppercase">GitHub Profile</div>
+                                    <div class="theme-text-secondary font-bold mt-0.5 truncate">github.com/zeeshanq799 ↗</div>
+                                </div>
+                            </a>
+
+                            <a href="https://www.fiverr.com/s/99v7kkj" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl theme-surface-elevated border theme-border hover:border-emerald-500 transition flex items-center gap-3 shadow-sm">
+                                <span class="text-xl">🟢</span>
+                                <div class="truncate">
+                                    <div class="text-[10px] theme-text-muted uppercase">Fiverr Seller</div>
+                                    <div class="theme-text-main font-bold mt-0.5 truncate">Level 2 &bull; 5.0★ ↗</div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ══ FOOTER ═══════════════════════════════════ -->
-    <footer>
-        <div class="footer-left">
-            Made with care by <strong>Zeeshan Qaisar</strong> · Full Stack Developer
-        </div>
-        <div class="footer-right">
-            © 2025 · Available for remote work worldwide
+    </main>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════════════════════════════ -->
+    <footer class="relative z-10 border-t theme-border py-8 px-4 sm:px-8 theme-bg-alt">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs theme-text-muted">
+            <div>
+                <strong class="theme-text-main font-display">Zeeshan Qaisar</strong> &bull; Senior Full Stack Laravel &amp; React Developer
+            </div>
+            <div class="flex flex-wrap items-center gap-5 font-mono">
+                <a href="./Zeeshan_Qaisar_Full_Stack_Laravel_Developer_CV.pdf" download="Zeeshan_Qaisar_Full_Stack_Laravel_Developer_CV.pdf" class="text-blue-600 hover:underline font-semibold">Download CV</a>
+                <a href="https://bluelinkadvisory.com/" target="_blank" rel="noopener noreferrer" class="hover:underline">Bluelink LMS</a>
+                <a href="https://incomefromviews.com/" target="_blank" rel="noopener noreferrer" class="hover:underline">IncomeFromViews</a>
+                <a href="https://www.heelashealthcare.com/" target="_blank" rel="noopener noreferrer" class="hover:underline">Heelas Healthcare</a>
+                <a href="https://github.com/zeeshanq799" target="_blank" rel="noopener noreferrer" class="hover:underline">GitHub</a>
+                <a href="https://www.fiverr.com/s/99v7kkj" target="_blank" rel="noopener noreferrer" class="hover:underline">Fiverr</a>
+            </div>
         </div>
     </footer>
 
-    <!-- ══ JAVASCRIPT ═══════════════════════════════ -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         JAVASCRIPT
+    ═══════════════════════════════════════════════════════════════════ -->
     <script>
         (function () {
             'use strict';
 
-            // ── Scroll progress bar ──────────────────────
-            const bar = document.getElementById('scrollBar');
-            window.addEventListener('scroll', () => {
-                const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-                bar.style.width = Math.min(pct, 100) + '%';
-            }, { passive: true });
+            // ── 1. HERO CODE PIPELINE TABS ────────────────────────────────────
+            const codeTabs = document.querySelectorAll('[data-code-tab]');
+            const codePanes = document.querySelectorAll('.code-pane');
 
-            // ── Hamburger menu ───────────────────────────
-            const navLinks = document.getElementById('navLinks');
-            const hamburger = document.getElementById('navHamburger');
-            const navOverlay = document.getElementById('navOverlay');
-
-            function openNav() {
-                navLinks.classList.add('is-open');
-                hamburger.classList.add('is-open');
-                hamburger.setAttribute('aria-expanded', 'true');
-                navOverlay.classList.add('is-open');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeNav() {
-                navLinks.classList.remove('is-open');
-                hamburger.classList.remove('is-open');
-                hamburger.setAttribute('aria-expanded', 'false');
-                navOverlay.classList.remove('is-open');
-                document.body.style.overflow = '';
-            }
-
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.contains('is-open') ? closeNav() : openNav();
-            });
-
-            // Close when clicking a nav link
-            navLinks.querySelectorAll('a').forEach(a => {
-                a.addEventListener('click', closeNav);
-            });
-
-            // Close when clicking overlay
-            navOverlay.addEventListener('click', closeNav);
-
-            // Close on Escape
-            document.addEventListener('keydown', e => {
-                if (e.key === 'Escape' && navLinks.classList.contains('is-open')) {
-                    closeNav();
-                    hamburger.focus();
-                }
-            });
-
-            // ── Staggered card entrance animation ────────
-            const animatables = document.querySelectorAll('.pf-animate');
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) return;
-                    const siblings = [...(entry.target.parentElement?.children || [])];
-                    const idx = siblings.indexOf(entry.target);
-                    const delay = Math.min(idx * 70, 350);
-                    setTimeout(() => entry.target.classList.add('pf-visible'), delay);
-                    io.unobserve(entry.target);
+            codeTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.getAttribute('data-code-tab');
+                    codeTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    codePanes.forEach(pane => {
+                        pane.classList.toggle('hidden', pane.id !== `code-pane-${target}`);
+                    });
                 });
-            }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+            });
 
-            animatables.forEach(el => io.observe(el));
+            // ── 2. PROJECT CATEGORY FILTER TABS ──────────────────────────────
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectItems = document.querySelectorAll('.project-item');
 
-            // ── Active nav link on scroll ─────────────────
-            const sections = document.querySelectorAll('section[id]');
-            const navAnchors = document.querySelectorAll('.nav-links a');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.getAttribute('data-filter');
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
 
-            const sectionObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        navAnchors.forEach(a => {
-                            a.classList.toggle(
-                                'active',
-                                a.getAttribute('href') === '#' + entry.target.id
-                            );
-                        });
+                    projectItems.forEach(item => {
+                        const categories = item.getAttribute('data-category') || '';
+                        item.style.display = (filter === 'all' || categories.includes(filter)) ? '' : 'none';
+                    });
+                });
+            });
+
+            // ── 3. SILENT COPY EMAIL (NO ALERTS / NO TOASTS) ─────────────────
+            const copyEmailBtn = document.getElementById('copyEmailBtn');
+            const copyEmailText = document.getElementById('copyEmailText');
+
+            if (copyEmailBtn && copyEmailText) {
+                copyEmailBtn.addEventListener('click', () => {
+                    const email = 'mrzeeshan.799@gmail.com';
+                    function onCopied() {
+                        copyEmailText.textContent = '✓ Copied: mrzeeshan.799@gmail.com';
+                        setTimeout(() => {
+                            copyEmailText.textContent = '📋 Copy Email';
+                        }, 3000);
+                    }
+
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText(email)
+                            .then(onCopied)
+                            .catch(() => {
+                                fallbackCopy(email);
+                                onCopied();
+                            });
+                    } else {
+                        fallbackCopy(email);
+                        onCopied();
                     }
                 });
-            }, { threshold: 0.35 });
+            }
 
-            sections.forEach(s => sectionObserver.observe(s));
+            function fallbackCopy(text) {
+                const temp = document.createElement('textarea');
+                temp.value = text;
+                temp.style.position = 'fixed';
+                temp.style.opacity = '0';
+                document.body.appendChild(temp);
+                temp.select();
+                try {
+                    document.execCommand('copy');
+                } catch (e) {}
+                document.body.removeChild(temp);
+            }
 
-            // ── Navbar shrink on scroll ───────────────────
-            const navbar = document.querySelector('.navbar');
-            let lastY = 0;
-            window.addEventListener('scroll', () => {
-                const y = window.scrollY;
-                navbar.style.boxShadow = y > 20 ? '0 1px 0 rgba(255,255,255,0.05)' : 'none';
-                lastY = y;
-            }, { passive: true });
+            // ── 4. MOBILE MENU & SCROLL PROGRESS ─────────────────────────────
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+                });
+            }
 
+            const scrollProgress = document.getElementById('scrollProgress');
+            if (scrollProgress) {
+                window.addEventListener('scroll', () => {
+                    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+                    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    scrollProgress.style.width = (height > 0 ? (winScroll / height) * 100 : 0) + '%';
+                }, { passive: true });
+            }
+
+            // ── 5. 3D TITANIUM DAYLIGHT CONSTELLATION CANVAS ──────────────────
+            const canvas = document.getElementById('bgCanvas');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                let width = 0, height = 0, particles = [];
+                const mouse = { x: -1000, y: -1000 };
+
+                function resizeCanvas() {
+                    width = canvas.width = window.innerWidth;
+                    height = canvas.height = window.innerHeight;
+                    const count = Math.min(Math.floor((width * height) / 20000), 55);
+                    particles = [];
+                    for (let i = 0; i < count; i++) {
+                        particles.push({
+                            x: Math.random() * width,
+                            y: Math.random() * height,
+                            z: Math.random() * 2 + 0.5,
+                            vx: (Math.random() - 0.5) * 0.3,
+                            vy: (Math.random() - 0.5) * 0.3,
+                            radius: Math.random() * 1.6 + 0.8
+                        });
+                    }
+                }
+
+                window.addEventListener('mousemove', e => {
+                    mouse.x = e.clientX;
+                    mouse.y = e.clientY;
+                }, { passive: true });
+
+                function animateCanvas() {
+                    ctx.clearRect(0, 0, width, height);
+
+                    for (let i = 0; i < particles.length; i++) {
+                        const p = particles[i];
+                        p.x += p.vx * p.z;
+                        p.y += p.vy * p.z;
+
+                        if (p.x < 0) p.x = width;
+                        if (p.x > width) p.x = 0;
+                        if (p.y < 0) p.y = height;
+                        if (p.y > height) p.y = 0;
+
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.radius * (p.z * 0.65), 0, Math.PI * 2);
+                        ctx.fillStyle = 'rgba(37, 99, 235, 0.4)';
+                        ctx.fill();
+
+                        for (let j = i + 1; j < particles.length; j++) {
+                            const p2 = particles[j];
+                            const dx = p.x - p2.x;
+                            const dy = p.y - p2.y;
+                            const dist = Math.sqrt(dx * dx + dy * dy);
+                            if (dist < 125) {
+                                ctx.beginPath();
+                                ctx.moveTo(p.x, p.y);
+                                ctx.lineTo(p2.x, p2.y);
+                                ctx.strokeStyle = `rgba(37, 99, 235, ${(1 - dist / 125) * 0.14})`;
+                                ctx.lineWidth = 0.8;
+                                ctx.stroke();
+                            }
+                        }
+
+                        const mdx = p.x - mouse.x;
+                        const mdy = p.y - mouse.y;
+                        const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
+                        if (mDist < 160) {
+                            ctx.beginPath();
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(mouse.x, mouse.y);
+                            ctx.strokeStyle = `rgba(5, 150, 105, ${(1 - mDist / 160) * 0.3})`;
+                            ctx.lineWidth = 1;
+                            ctx.stroke();
+                        }
+                    }
+                    requestAnimationFrame(animateCanvas);
+                }
+
+                window.addEventListener('resize', resizeCanvas);
+                resizeCanvas();
+                animateCanvas();
+            }
         })();
     </script>
-
 </body>
-
 </html>
